@@ -1,2 +1,23 @@
 .form-group
   position: relative
+  margin-bottom: 10px
+  &:last-child
+    margin-bottom: 0
+  &--btn
+    margin-top: 20px
+    .btn
+      width: 100%
+
+.form-field
+  width: 100%
+  padding: 11px 20px
+  border: 1px solid $bd-color
+  background: $bg-color
+  font-size: 12px
+  color: $input-color
+  +trans
+  &::placeholder
+    color: inherit
+  &:focus
+    border-color: $accent
+    outline: none

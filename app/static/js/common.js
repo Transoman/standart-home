@@ -1,6 +1,7 @@
 global.jQuery = require('jquery');
 var svg4everybody = require('svg4everybody'),
-popup = require('jquery-popup-overlay');
+popup = require('jquery-popup-overlay'),
+Imask = require('imask');
 
 jQuery(document).ready(function($) {
 
@@ -18,7 +19,6 @@ jQuery(document).ready(function($) {
     });
 
   };
-  
 
   // Modal
   $('.modal').popup({
@@ -28,9 +28,24 @@ jQuery(document).ready(function($) {
     }
   });
 
+  let inputMask = function() {
+    let inputMask = $('input[type="tel"]');
+    let maskOptions = {
+      mask: '+{7} (000) 000-00-00'
+    };
+
+    if (inputMask.length) {
+      inputMask.each(function(i, el) {
+        IMask(el, maskOptions);
+      });
+    }
+    
+  };
+
   // SVG
   svg4everybody({});
 
   toggleMenu();
+  inputMask();
 
 });

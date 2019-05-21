@@ -47,6 +47,30 @@ a
     color: lighten($link-color, 5%)
     outline: none
 
+section
+  position: relative
+
+h1, h2, h3, h4, h5, h6
+  color: $title-link-color
+
+h1
+  font-size: 48px
+  +r(1200)
+    font-size: 42px
+  +r(767)
+    font-size: 30px
+  +r(480)
+    font-size: 24px
+
+h2
+  font-size: 30px
+  font-weight: 300
+
+h3
+  font-size: 24px
+  +r(480)
+    font-size: 20px
+
 /* Hidden element */
 .visually-hidden
   position: absolute
@@ -64,23 +88,27 @@ a
   vertical-align: middle
   padding: 10px 15px
   font-family: $main-font
-  font-size: 16px
+  font-size: 14px
   font-weight: 700
   color: #fff
   text-align: center
   background-color: $accent
+  +bgl
   border: 0
   outline: none
   text-decoration: none
   cursor: pointer
   user-select: none
   transition: all .25s ease
-  text-transform: uppercase
+  text-shadow: 1px 1px 0px rgba(#000, 0.2)
+  box-shadow: 15px 15px 25px rgba(182, 240, 62, 0.25)
   &:hover
-    background-color: lighten($accent, 5%)
+    background: linear-gradient(90deg, lighten(#71AB04, 5%) 0%, #A0DC22 100%)
   &:active
     background-color: darken($accent, 5%)
-    color: rgba(255,255,255,.3)
+    background: linear-gradient(90deg, #A0DC22 0%, #A0DC22 100%)
+  &:focus
+    background: linear-gradient(90deg, #A0DC22 0%, #A0DC22 100%)
   &[disabled]
     background-color: #e5e5e5
     cursor: not-allowed
