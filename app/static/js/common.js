@@ -5,11 +5,20 @@ popup = require('jquery-popup-overlay');
 jQuery(document).ready(function($) {
 
   // Toggle nav menu
-  $('.nav-toggle').on('click', function (e) {
-    e.preventDefault();
-    $(this).toggleClass('active');
-    $('.header__nav').toggleClass('open');
-  });
+  let toggleMenu = function() {
+    let nav = $('.header__nav');
+    $('.nav-toggle').on('click', function (e) {
+      e.preventDefault();
+      nav.toggleClass('is-active');
+    });
+
+    $('.nav .btn-close').click(function(e) {
+      e.preventDefault();
+      nav.removeClass('is-active');
+    });
+
+  };
+  
 
   // Modal
   $('.modal').popup({
@@ -21,5 +30,7 @@ jQuery(document).ready(function($) {
 
   // SVG
   svg4everybody({});
+
+  toggleMenu();
 
 });

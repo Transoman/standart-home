@@ -1,1 +1,76 @@
 header.header
+  .header__top
+    .container
+      a(href="./").logo.header__logo
+        span.logo__head Standard Home
+        p.logo__descr Здесь будет текст
+
+      .phone.header__phone
+        .phone__item
+          a(href="tel:+74951084961").phone__tel
+            +icon('phone', 'phone__icon')
+            | +7 495 108 49 61
+        .phone__item
+          a(href="tel:0800202222").phone__tel 0 800 20 2222<br>
+          a(href="#").phone__callback.callback_open Обратный звонок
+
+      .small-contact.header__small-contact
+        .small-contact__item
+          +icon('mail', 'small-contact__icon')
+          a(href="mailto:mail@mail.com") mail@mail.com
+        .small-contact__item
+          +icon('location', 'small-contact__icon')
+          p 115035,Россия, Москва, <br>Раушская наб., 4/5, блок 3-15
+
+      button(type="button").nav-toggle
+        span.nav-toggle__line
+
+  .header__bottom
+    .container
+      nav.nav.header__nav
+        button(type="button").btn-close
+        ul.nav-list
+          li
+            a(href="#") Главная
+          li
+            a(href="#") Продукция
+          li.has-submenu
+            a(href="#") Сервис и Услуги
+            ul.sub-menu
+              li
+                a(href="#") Установка
+              li
+                a(href="#") Доставка
+              li
+                a(href="#") Гарантия
+              li
+                a(href="#") Расширенный сервис
+          li
+            a(href="#") О нас
+          li
+            a(href="#") Полезная информация
+          li
+            a(href="#") Корпоративным клиентам
+        .header-search
+          form(action="#")
+            .form-group
+              input(type="text", name="s", placeholder="Поиск", required).header-search__field
+              button(type="submit").header-search__btn
+                +icon('search', 'header-search__btn-icon')
+
+        .phone.nav__phone
+          .phone__item
+            a(href="tel:+74951084961").phone__tel
+              +icon('phone', 'phone__icon')
+              | +7 495 108 49 61
+          .phone__item
+            a(href="tel:0800202222").phone__tel 0 800 20 2222<br>
+            a(href="#").phone__callback.callback_open Обратный звонок
+
+        .small-contact.nav__small-contact
+          .small-contact__item
+            +icon('mail', 'small-contact__icon')
+            a(href="mailto:mail@mail.com") mail@mail.com
+          .small-contact__item
+            +icon('location', 'small-contact__icon')
+            p 115035,Россия, Москва, <br>Раушская наб., 4/5, блок 3-15

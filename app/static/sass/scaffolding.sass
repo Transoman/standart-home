@@ -29,13 +29,23 @@ body
   min-width: 320px
   font-family: $main-font
   font-size: 14px
-  line-height: 1.6
+  line-height: 1.4
   color: $main-color
   overflow-x: hidden
 
 img
   max-width: 100%
   height: auto
+
+a
+  color: $link-color
+  +trans
+  &:hover
+    color: lighten($link-color, 5%)
+    text-decoration: none
+  &:focus
+    color: lighten($link-color, 5%)
+    outline: none
 
 /* Hidden element */
 .visually-hidden

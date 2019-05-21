@@ -1,18 +1,155 @@
+.nav
+  display: flex
+  align-items: center
+  margin-left: -15px
+  +r(992)
+    position: fixed
+    top: 0
+    right: 0
+    z-index: 10
+    display: block
+    height: 100%
+    width: 320px
+    padding: 60px 20px 40px
+    margin: 0
+    overflow-y: auto
+    transform: translateX(100%)
+    +bgl
+    +smooth-scroll
+    +trans
+    & > *:not(:last-child)
+      margin-bottom: 30px
+    &.is-active
+      transform: translateX(0)
+  &__small-contact
+    display: none
+    +r(992)
+      display: block
+  &__phone
+    display: none
+    +r(992)
+      display: block
+      .phone
+        &__item
+          margin-right: 0
+          margin-bottom: 15px
+          &:last-child
+            margin-bottom: 0
+        &__callback
+          color: #fff
+  .btn-close
+    display: none
+    +r(992)
+      display: block
+      position: absolute
+      top: 20px
+      right: 20px
+
+.nav-list
+  margin: 0
+  padding: 0
+  list-style: none
+  display: flex
+  +r(992)
+    display: block
+    margin: 0 -20px
+  > li
+    position: relative
+    &.has-submenu
+      > a
+        position: relative
+        &::after
+          content: ''
+          display: inline-block
+          vertical-align: middle
+          margin-left: 10px
+          margin-top: -2px
+          width: 0
+          height: 0
+          border-style: solid
+          border-width: 5px 4px 0 4px
+          border-color: #fff transparent transparent transparent
+      &:hover
+        > .sub-menu
+          opacity: 1
+          visibility: visible
+    > a
+      display: block
+      padding: 16px 15px
+      font-size: 13px
+      font-weight: 700
+      color: #fff
+      text-transform: uppercase
+      text-shadow: 1px 1px 1px rgba(#000, 0.1)
+      +r(1200)
+        font-size: 12px
+        padding:
+          right: 10px
+          left: 10px
+      +r(992)
+        padding: 10px 18px
+      &:hover, &:focus
+        background-color: $link-color
+        box-shadow: inset 0px 0px 5px rgba(#000, 0.05)
+
+.sub-menu
+  position: absolute
+  top: 100%
+  left: 0
+  z-index: 10
+  margin: 0
+  padding: 15px 0
+  list-style: none
+  width: 165px
+  background-color: #fff
+  box-shadow: 10px 10px 15px rgba(#000, 0.1)
+  +trans
+  opacity: 0
+  visibility: hidden
+  +r(992)
+    opacity: 1
+    visibility: visible
+    position: static
+    background: none
+    width: auto
+    box-shadow: none
+    padding: 0
+  a
+    display: block
+    padding: 6px 18px
+    font-size: 12px
+    color: $title-link-color
+    +r(992)
+      font-size: 12px
+      font-weight: 700
+      color: #fff
+      text-transform: uppercase
+      padding: 10px 18px
+      padding-left: 28px
+    &:hover
+      background-color: #94D212
+      box-shadow: 10px 10px 15px rgba(#000, 0.1)
+      +r(992)
+        background-color: $link-color
+        box-shadow: inset 0px 0px 5px rgba(#000, 0.05)
+
 .nav-toggle
   display: none
   position: absolute
-  right: 0
-  top: 17px
+  right: 15px
+  top: 50%
   width: 28px
   height: 15px
   padding: 0
-  margin: 0
+  margin: -7.5px 0 0
   outline: none
   border: none
   background: none
-  z-index: 101
+  z-index: 1
   cursor: pointer
-  +transition
+  +trans
+  +r(992)
+    display: block
   &:focus
     outline: none
   &__line
@@ -21,7 +158,7 @@
     height: 2px
     width: 100%
     background: $accent
-    +transition
+    +trans
     &::after, &::before
       content: ''
       position: absolute
@@ -30,7 +167,7 @@
       height: 2px
       width: 100%
       background: $accent
-      +transition
+      +trans
     &::before
       top: -6px
     &::after

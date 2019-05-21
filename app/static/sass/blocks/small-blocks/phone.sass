@@ -1,0 +1,21 @@
+.phone
+  display: flex
+  align-items: flex-start
+  &__item
+    margin-right: 30px
+    &:last-child
+      margin-right: 0
+  &__tel
+    font-size: 16px
+    font-weight: 500
+    color: $title-link-color
+    +r(767)
+      font-size: 14px
+  &__icon
+    width: 25px
+    height: 25px
+    fill: $light-accent-color
+  &__callback
+    font-size: 12px
+    font-weight: 500
+    text-decoration: underline
