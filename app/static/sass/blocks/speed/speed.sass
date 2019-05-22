@@ -1,0 +1,109 @@
+.speed
+  background: $title-link-color url(../images/general/speed-bg.jpg) no-repeat center / cover
+  color: $logo-descr
+  +r(767)
+    padding-bottom: 0
+  .section-title
+    color: #fff
+  &__wrap
+    position: relative
+    display: flex
+    justify-content: space-between
+    +r(767)
+      flex-direction: column
+      text-align: center
+      align-items: center
+  &__left, &__right
+    width: 270px
+    +r(992)
+      width: 200px
+    +r(767)
+      width: auto
+  &__subtitle
+    margin-bottom: 20px
+    font-size: 18px
+    font-weight: 500
+    color: #fff
+  &__descr
+    margin-bottom: 120px
+    +r(767)
+      margin-bottom: 60px
+  &__img
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    +r(1200)
+      width: 370px
+    +r(992)
+      width: 270px
+    +r(767)
+      position: static
+      top: auto
+      left: auto
+      transform: none
+  &__item
+    position: relative
+    +r(767)
+      margin-bottom: 55px
+      padding-top: 0
+    b
+      display: block
+      margin-bottom: 15px
+      font-size: 18px
+      font-weight: 500
+      color: #fff
+    p
+      margin: 0
+      font-size: 13px
+    &--fish
+      .speed__time-circle
+        height: 20px
+    &--fruit
+      padding-top: 25px
+      margin-bottom: 70px
+      .speed__time-circle
+        height: 10px
+  &__img-wrap
+    position: relative
+    display: inline-block
+    img
+      margin-bottom: 10px
+      border-radius: 4px
+  &__time
+    position: absolute
+    right: -25px
+    top: -25px
+    width: 50px
+    height: 50px
+    background: #fff
+    border-radius: 50%
+    color: #151618
+    font-size: 8px
+    line-height: 1
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    span
+      font-size: 10px
+      font-weight: 700
+  &__time-circle
+    position: absolute
+    top: -5px
+    width: 60px
+    height: 60px
+    overflow: hidden
+    &::before
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      width: 60px
+      height: 60px
+      border-radius: 50%
+      border: 2px solid #73E34B
+      border-bottom: 2px solid transparent
+      border-left: 2px solid transparent
+      border-top: 2px solid transparent
+      transform: rotate(-45deg)
