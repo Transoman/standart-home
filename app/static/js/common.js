@@ -1,7 +1,9 @@
 global.jQuery = require('jquery');
 let svg4everybody = require('svg4everybody'),
 popup = require('jquery-popup-overlay'),
-Imask = require('imask');
+Imask = require('imask'),
+Swiper = require('swiper'),
+fancybox = require('@fancyapps/fancybox');
 
 jQuery(document).ready(function($) {
 
@@ -102,11 +104,77 @@ jQuery(document).ready(function($) {
     return 'https://www.youtube.com/embed/' + id + query;
   }
 
+  // Sliders
+  let repeatSlider = function() {
+    let sliders = $('.product-card-slider');
+
+    if (sliders.length) {
+
+      sliders.each(function(i, el) {
+        let $this = $(this);
+        $this.addClass("product-card-slider-" + i);
+        $this.find('a').addClass("product-card-slider__link-" + i);
+        $this.next().addClass("product-card-thumb-slider-" + i);
+
+        var productCardSlider = 'productCardSlider' + i;
+
+        window[productCardSlider] = new Swiper('.product-card-slider-' + i, {
+          spaceBetween: 30,
+          thumbs: {
+            swiper: {
+              el: '.product-card-thumb-slider-' + i,
+              slidesPerView: 5,
+              spaceBetween: 4,
+              breakpoints: {
+                1200: {
+                  slidesPerView: 4
+                },
+                992: {
+                  slidesPerView: 3
+                },
+                767: {
+                  slidesPerView: 5
+                },
+                480: {
+                  slidesPerView: 3
+                },
+              }
+            }
+          }
+        });
+
+      });
+
+      sliders.each(function(i, el) {
+        $().fancybox({
+          selector : '.product-card-slider__link-' + i,
+          thumbs   : false,
+          hash     : false,
+          loop: true,
+          beforeClose : function(instance) {
+            if ($('.product-card-slider-' + i).length) {
+              var productCardSlider = 'productCardSlider' + i;
+              window[productCardSlider].slideTo( instance.currIndex);
+            }
+          }
+        });
+      });
+
+    }
+
+  };
+
+
+  
+
+  
+
   // SVG
   svg4everybody({});
 
   toggleMenu();
   inputMask();
   findVideos();
+  repeatSlider();
 
 });

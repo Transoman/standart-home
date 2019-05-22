@@ -1,0 +1,15 @@
+.product-card-thumb-slider
+  margin: 0 50px 30px
+  +r(1200)
+    margin: 0 30px 30px
+  +r(480)
+    margin: 0 20px 20px
+  &__item
+    img
+      border: 1px solid #C9E295
+      cursor: pointer
+      +trans
+    &.swiper-slide-thumb-active
+      img
+        border-width: 2px
+        border-color: $video-btn-color

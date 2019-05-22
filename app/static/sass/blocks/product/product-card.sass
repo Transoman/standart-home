@@ -1,0 +1,97 @@
+.product-card
+  margin-bottom: 30px
+  padding: 0 50px 20px
+  background-color: #fff
+  box-shadow: 5px 5px 15px rgba(#000, 0.05)
+  +r(1200)
+    padding: 0 30px 20px
+  +r(480)
+    padding: 0 20px 20px
+  &__gallery
+    position: relative
+    margin: 0 -50px
+    +r(1200)
+      margin: 0 -30px
+    +r(480)
+      margin: 0 -20px
+  &__features
+    position: absolute
+    top: 50px
+    left: 50px
+    z-index: 2
+    text-align: center
+    +r(1200)
+      left: 30px
+    +r(992)
+      top: 20px
+    +r(480)
+      left: 15px
+    &-item
+      margin-bottom: 20px
+      +r(992)
+        margin-bottom: 15px
+      +r(480)
+        margin-bottom: 10px
+      &:last-child
+        margin-bottom: 0
+      img
+        +r(480)
+          width: 20px
+    &-title
+      margin: 5px 0 0
+      font-size: 9px
+      font-weight: 500
+      color: $title-link-color
+  &__body
+    padding-top: 20px
+    border-top: 1px solid $bd-color
+  &__title
+    font-size: 30px
+    font-weight: 300
+    +r(480)
+      font-size: 24px
+    span
+      display: block
+      font-size: 18px
+      font-weight: 900
+  &__content
+    display: flex
+    align-items: center
+    +r(992)
+      display: block
+  &__package
+    margin-right: 15px
+    font-size: 12px
+    +r(992)
+      margin-right: 0
+      margin-bottom: 20px
+    p
+      margin-bottom: 10px
+    ul
+      margin: 0 0 15px
+      padding: 0
+      list-style: none
+      color: $title-link-color
+      li
+        position: relative
+        padding-left: 10px
+        &::before
+          content: ''
+          position: absolute
+          top: 6px
+          left: 0
+          width: 3px
+          height: 3px
+          border-radius: 50%
+          background-color: $video-btn-color
+    &-link
+      text-transform: uppercase
+      text-decoration: underline
+      font-weight: 700
+  &__prices
+    margin-left: auto
+    text-align: center
+    font-size: 12px
+    .btn
+      max-width: 200px
+      width: 100%
