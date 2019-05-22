@@ -1,0 +1,57 @@
+.advantages-list
+  margin: 0 130px 55px 170px
+  +r(1200)
+    margin: 0 0 55px 0
+  &__item
+    display: flex
+    align-items: center
+    margin-bottom: 130px
+    +r(1200)
+      margin-bottom: 80px
+    +r(767)
+      flex-direction: column-reverse
+      text-align: center
+      margin-bottom: 50px
+    &:nth-child(2n)
+      flex-direction: row-reverse
+      +r(767)
+        flex-direction: column-reverse
+      .advantages-list
+        &__img-wrap
+          margin:
+            left: 0
+            right: auto
+    &:last-child
+      margin-bottom: 0
+  &__content
+    width: 41.95%
+    +r(992)
+      width: 48%
+    +r(767)
+      width: 100%
+    p
+      strong
+        font-size: 18px
+        font-weight: 500
+        color: $link-color
+        +r(767)
+          font-size: 16px
+      &:last-child
+        margin-bottom: 0
+  &__img-wrap
+    width: 41.95%
+    margin-left: auto
+    +r(992)
+      width: 48%
+    +r(767)
+      width: 100%
+      margin-bottom: 20px
+      img
+        max-width: 30%
+  &__title
+    margin-bottom: 20px
+    font-weight: 500
+    line-height: 1.3
+    +r(767)
+      margin-bottom: 15px
+      font-size: 20px
