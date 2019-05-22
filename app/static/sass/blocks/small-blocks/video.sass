@@ -1,0 +1,64 @@
+.video
+  position: relative
+  width: 100%
+  height: 0
+  padding-bottom: 56.25%
+  background-color: $title-link-color
+  overflow: hidden
+  &__link
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+  &__media
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    border: none
+  &__button
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    z-index: 1
+    display: none
+    width: 60px
+    height: 60px
+    padding: 0
+    background-color: $video-btn-color
+    border: 0
+    border-radius: 50%
+    box-shadow: 15px 15px 50px rgba(182, 240, 62, 0.25)
+    +r(576)
+      width: 40px
+      height: 40px
+    &::before
+      content: ''
+      position: absolute
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      z-index: -1
+      opacity: 1
+      border: 1px solid $light-accent-color
+      box-shadow: inherit
+      border-radius: inherit
+      animation: video-btn 1.2s cubic-bezier(0.4, 0, 0.2, 1) infinite 1s
+    &:hover, &:focus
+      outline: none
+      &::before
+        animation: none
+    &:focus
+      outline: none
+    &-icon
+      width: 20px
+      height: 20px
+      fill: #fff
+  &--enabled
+    cursor: pointer
+    .video__button
+      display: block
