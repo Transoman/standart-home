@@ -1,0 +1,40 @@
+.product-for
+  .section-title
+    margin-bottom: 25px
+    text-align: left
+  &__item
+    position: relative
+    background-color: $bg-color
+    +r(992)
+      margin-bottom: 30px
+    img
+      width: 100%
+  &__link
+    position: absolute
+    left: 0
+    bottom: 0
+    z-index: 1
+    display: block
+    padding: 20px 60px 20px 20px
+    background-color: $dark
+    font-weight: 500
+    color: #fff
+    text-transform: uppercase
+    &::after
+      content: ''
+      position: absolute
+      top: 0
+      right: 0
+      bottom: 0
+      width: 40px
+      background-color: $light-accent-color
+      z-index: 1
+    &-icon
+      position: absolute
+      top: 50%
+      right: 10px
+      z-index: 2
+      margin-top: -10px
+      width: 20px
+      height: 20px
+      fill: #2B531D
