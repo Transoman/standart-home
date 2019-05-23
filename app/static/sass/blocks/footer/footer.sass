@@ -1,0 +1,51 @@
+.footer
+  padding: 70px 0 65px
+  color: #464646
+  font-size: 13px
+  background-color: $bg-color
+  +r(480)
+    padding: 40px 0 0
+  .container
+    display: flex
+    justify-content: space-between
+    +r(992)
+      flex-wrap: wrap
+  &__title
+    margin-bottom: 10px
+    font-size: 14px
+    font-weight: 500
+  &__col
+    margin-right: 100px
+    +r(992)
+      margin-right: 15px
+    +r(767)
+      width: 50%
+      margin-right: 0
+      margin-bottom: 30px
+    +r(480)
+      width: 100%
+      text-align: center
+    &:first-child
+      padding-left: 70px
+      +r(1200)
+        padding: 0
+    &:last-child
+      padding-right: 70px
+      margin-right: 0
+      +r(1200)
+        padding: 0
+  &__menu
+    margin: 0
+    padding: 0
+    list-style: none
+    li
+      margin-bottom: 10px
+      &:last-child
+        margin-bottom: 0
+    a
+      color: #464646
+      &:hover, &:focus
+        color: lighten($link-color, 5%)
+  &__social
+    +r(480)
+      justify-content: center

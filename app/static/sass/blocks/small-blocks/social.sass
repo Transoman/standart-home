@@ -1,0 +1,17 @@
+.social
+  margin: 0
+  padding: 0
+  list-style: none
+  display: flex
+  align-items: center
+  & > *:not(:last-child)
+    margin-right: 10px
+  li
+    &:hover
+      .social__icon
+        fill: $bg-green-color
+  &__icon
+    width: 24px
+    height: 24px
+    fill: $video-btn-color
+    +trans
