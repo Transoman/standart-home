@@ -1,0 +1,50 @@
+.problem-list
+  &__item
+    width: 25%
+    padding: 20px
+    border: 1.5px solid #fff
+    background-color: $light-accent-color
+    overflow: hidden
+    +r(1200)
+      width: 33.33%
+    +r(992)
+      width: 50%
+    +r(767)
+      width: 100%
+    &:hover
+      img
+        transform: translate(-50%, -50%) scale(1.1)
+    img
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      display: block
+      width: 100%
+      +trans(transform, 1s)
+    &--img
+      z-index: 1
+      &::before
+        content: ''
+        position: absolute
+        top: 0
+        right: 0
+        bottom: 0
+        left: 0
+        z-index: 1
+        background-color: rgba(#000,0.5)
+      .problem-list
+        &__content, &__title
+          color: #fff
+  &__content
+    position: relative
+    z-index: 1
+    color: $title-link-color
+    font-size: 12px
+    font-weight: 500
+    line-height: 1.5
+  &__title
+    margin-bottom: 15px
+    font-size: 16px
+    font-weight: 700
+    line-height: 1.3

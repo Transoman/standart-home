@@ -3,9 +3,14 @@ let svg4everybody = require('svg4everybody'),
 popup = require('jquery-popup-overlay'),
 Imask = require('imask'),
 Swiper = require('swiper'),
-fancybox = require('@fancyapps/fancybox');
+fancybox = require('@fancyapps/fancybox'),
+Masonry = require('masonry-layout'),
+imagesLoaded = require('imagesloaded'),
+jQueryBridget = require('jquery-bridget');
 
 jQuery(document).ready(function($) {
+
+  jQueryBridget( 'masonry', Masonry, $ );
 
   // Toggle nav menu
   let toggleMenu = function() {
@@ -164,10 +169,37 @@ jQuery(document).ready(function($) {
 
   };
 
+  // Masonry
+  let grid = $('.problem-list').masonry({
+    itemSelector: '.problem-list__item',
+    columnWidth: '.problem-list__item:last-child'
+  });
 
-  
+  let masonryResize = function () {
+    if($('.problem-list').length) {
+      let defaultSize = $('.problem-list__item:last-child').outerWidth();
+      let defaultWidth = $('.problem-list__item');
+      let height50 = $('.problem-list__item--50');
+      let height100 = $('.problem-list__item--100');
 
-  
+      if ($(window).width() < 768) {
+        defaultWidth.css('height', defaultSize / 1.69);
+        height50.css('height', defaultSize / 1.69);
+        height100.css('height', defaultSize / 1.69);
+      }
+      else {
+        defaultWidth.css('height', defaultSize / 1.678);
+        height50.css('height', defaultSize / 1.12);
+        height100.css('height', (defaultSize / 1.68) * 3);
+      }
+    }
+  }
+
+  let imgLoad = new imagesLoaded($('.problem-list'));
+
+  imgLoad.on( 'progress', function( instance, image ) {
+    grid.masonry('layout');
+  });
 
   // SVG
   svg4everybody({});
@@ -176,5 +208,10 @@ jQuery(document).ready(function($) {
   inputMask();
   findVideos();
   repeatSlider();
+  masonryResize();
+
+  $(window).resize(function() {
+    masonryResize();
+  });
 
 });
