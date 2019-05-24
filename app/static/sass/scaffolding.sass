@@ -113,14 +113,17 @@ h3
   text-shadow: 1px 1px 0px rgba(#000, 0.2)
   box-shadow: 15px 15px 25px rgba(182, 240, 62, 0.25)
   &:hover
-    background: linear-gradient(90deg, lighten(#71AB04, 5%) 0%, #A0DC22 100%)
+    background-color: $link-color
+    background-image: linear-gradient(90deg, lighten(#71AB04, 5%) 0%, #A0DC22 100%)
     color: #fff
   &:active
     background-color: darken($accent, 5%)
-    background: linear-gradient(90deg, #A0DC22 0%, #A0DC22 100%)
+    background-color: $link-color
+    background-image: linear-gradient(90deg, #A0DC22 0%, #A0DC22 100%)
     color: #fff
   &:focus
-    background: linear-gradient(90deg, #A0DC22 0%, #A0DC22 100%)
+    background-color: $link-color
+    background-image: linear-gradient(90deg, #A0DC22 0%, #A0DC22 100%)
     color: #fff
   &[disabled]
     background-color: #e5e5e5
