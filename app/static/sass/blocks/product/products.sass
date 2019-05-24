@@ -1,0 +1,113 @@
+.products-list
+  padding: 0 100px
+  +r(1200)
+    padding: 0
+  &__item
+    display: flex
+    align-items: center
+    margin: 0 -15px 50px
+    overflow: hidden
+    +r(767)
+      flex-direction: column
+      text-align: center
+    &:last-child
+      margin-bottom: 0
+    &:nth-child(2n)
+      flex-direction: row-reverse
+      +r(767)
+        flex-direction: column
+      .products-list
+        &__line
+          background-image: linear-gradient(to left, $light-accent-color, rgba(#fff, 0))
+          transform: translateY(-15px)
+          &::before
+            left: auto
+            right: -25px
+          &::after
+            left: auto
+            right: -20px
+        &__content
+          padding-right: 30px
+          padding-left: 70px
+          +r(992)
+            padding: 0
+  &__col
+    width: 50%
+    padding: 0 15px
+    +r(767)
+      width: 100%
+  &__content
+    padding-left: 30px
+    padding-right: 70px
+    font-size: 13px
+    +r(992)
+      padding: 0
+    .btn
+      position: relative
+      margin-top: 20px
+      padding:
+        right: 75px
+        left: 30px
+        top: 15px
+        bottom: 15px
+      +r(992)
+        padding-left: 20px
+        padding-right: 65px
+      &::after
+        content: ''
+        position: absolute
+        top: 0
+        right: 0
+        bottom: 0
+        width: 50px
+        background-color: $light-accent-color
+      svg
+        position: absolute
+        top: 50%
+        right: 15px
+        transform: translateY(-50%)
+        width: 20px
+        height: 20px
+        fill: #2B531D
+        z-index: 1
+  &__title
+    position: relative
+    margin-bottom: 20px
+    text-transform: uppercase
+    span
+      display: block
+      font-size: 18px
+      font-weight: 400
+  &__line
+    position: relative
+    width: 600px
+    height: 1px
+    background-image: linear-gradient(to right, $light-accent-color, rgba(#fff, 0))
+    transform: translateX(-230px) translateY(-15px)
+    +r(992)
+      width: 500px
+      transform: translateX(-170px) translateY(-15px)
+    +r(767)
+      display: none
+    &::before
+      content: ''
+      position: absolute
+      left: -25px
+      top: -12.5px
+      width: 25px
+      height: 25px
+      border-radius: 50%
+      border: 1px solid $light-accent-color
+    &::after
+      content: ''
+      position: absolute
+      left: -20px
+      top: -7.5px
+      width: 15px
+      height: 15px
+      border-radius: 50%
+      background-color: $light-accent-color
+  &__img-wrap
+    +r(767)
+      max-width: 300px
+      margin: 0 auto 30px
