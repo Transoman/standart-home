@@ -1,0 +1,32 @@
+.text-box-list
+  display: flex
+  flex-wrap: wrap
+  border: 1px solid $bd-color
+  &__item
+    position: relative
+    display: flex
+    flex-direction: column
+    width: 25%
+    border-right: 1px solid $bd-color
+    padding: 30px 30px 50px
+    font-size: 13px
+    +r(1200)
+      width: 50%
+      border-bottom: 1px solid $bd-color
+      &:nth-child(2n)
+        border-right: none
+      &:nth-last-child(-n+2)
+        border-bottom: 0
+    +r(767)
+      width: 100%
+      border-right: 0
+      &:nth-last-child(2)
+        border-bottom: 1px solid $bd-color
+      &:nth-last-child(-n+1)
+        border-bottom: 0
+    &:last-child
+      border: 0
+  &__title
+    margin-bottom: 15px
+    font-size: 18px
+    font-weight: 500

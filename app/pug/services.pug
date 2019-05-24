@@ -1,0 +1,13 @@
+extends template/main
+
+block variables
+  - var title = 'Сервис и услуги'
+  - var pageClass = ''
+  - var titleForm = 'Консультация мастера'
+
+block content
+  include pages/services/hero
+  include pages/services/services-card
+  include pages/services/info-card
+  include pages/services/text-box
+  include modules/form/form-how
