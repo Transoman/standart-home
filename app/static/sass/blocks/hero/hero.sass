@@ -58,6 +58,12 @@
         color: $title-link-color
         &:hover, &:focus
           color: lighten($link-color, 5%)
+    .form-field
+      padding-top: 11px
+      padding-bottom: 11px
+    .btn
+      padding-top: 10px
+      padding-bottom: 10px
   &--main
     padding-bottom: 90px
     .hero
@@ -71,11 +77,12 @@
             font-size: 18px
             margin-bottom: 50px
         .btn
-          padding: 16px 35px
+          padding-right: 35px
+          padding-left: 35px
           +r(576)
             padding:
-                right: 20px
-                left: 20px
+              right: 20px
+              left: 20px
       &__title
         +r(576)
           br

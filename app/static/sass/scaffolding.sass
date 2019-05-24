@@ -95,10 +95,11 @@ h3
 .btn
   display: inline-block
   vertical-align: middle
-  padding: 10px 15px
+  padding: 15px 15px
   font-family: $main-font
   font-size: 14px
   font-weight: 700
+  line-height: 1.45
   color: #fff
   text-align: center
   background-color: $accent
@@ -133,12 +134,13 @@ h3
 .btn-flat
   display: inline-block
   vertical-align: middle
-  padding: 10px 45px
+  padding: 15px 45px
   font-family: $main-font
   font-size: 14px
   font-weight: 500
   color: $dark
   text-align: center
+  line-height: 1.45
   background-color: $light-accent-color
   border: 0
   border-radius: 0
@@ -153,7 +155,13 @@ h3
   &--white
     background-color: #fff
     &:hover, &:focus
-        background-color: $bg-color
+      background-color: $bg-color
+  &--black
+    background-color: $dark
+    color: #fff
+    &:hover, &:focus
+      color: #fff
+      background-color: lighten($dark, 20%)
 
 .wrapper
   display: flex
