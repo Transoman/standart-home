@@ -1,0 +1,71 @@
+.faq-card
+  position: relative
+  height: calc(100% - 30px)
+  margin-bottom: 30px
+  z-index: 1
+  overflow: hidden
+  &::before
+    content: ''
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    background-color: rgba($dark, 0.5)
+  &:hover
+    .faq-card
+      &__body
+        transform: translateY(0)
+  img
+    width: 100%
+    height: 100%
+  &__title
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    display: flex
+    align-items: center
+    width: 100%
+    height: 100%
+    padding: 30px
+    font-size: 18px
+    font-weight: 700
+    color: #fff
+    +r(576)
+      padding: 15px
+      font-size: 16px
+  &__body
+    position: absolute
+    top: 0
+    transform: translateY(105%)
+    left: 0
+    width: 100%
+    height: 100%
+    z-index: 2
+    padding: 30px
+    font-size: 13px
+    background-color: $light-accent-color
+    +trans
+    +r(576)
+      padding: 15px
+  &__content
+    height: calc(100% - 25px)
+    h3
+      font-size: 18px
+      font-weight: 700
+      +r(576)
+        font-size: 16px
+    p
+      &:last-child
+        margin-bottom: 0
+  &__link
+    position: absolute
+    left: 30px
+    bottom: 30px
+    text-decoration: underline
+    font-size: 14px
+    font-weight: 500
+    +r(576)
+      bottom: 15px
+      left: 15px

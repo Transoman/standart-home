@@ -6,7 +6,8 @@ Swiper = require('swiper'),
 fancybox = require('@fancyapps/fancybox'),
 Masonry = require('masonry-layout'),
 imagesLoaded = require('imagesloaded'),
-jQueryBridget = require('jquery-bridget');
+jQueryBridget = require('jquery-bridget'),
+Simplebar = require('simplebar');
 
 jQuery(document).ready(function($) {
 
