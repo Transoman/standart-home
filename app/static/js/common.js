@@ -202,6 +202,23 @@ jQuery(document).ready(function($) {
     grid.masonry('layout');
   });
 
+  // Disable hover on scroll
+  let disableHover = function() {
+    let body = document.body,
+    timer;
+
+    window.addEventListener('scroll', function() {
+      clearTimeout(timer);
+      if(!body.classList.contains('disable-hover')) {
+        body.classList.add('disable-hover')
+      }
+      
+      timer = setTimeout(function(){
+        body.classList.remove('disable-hover')
+      }, 200);
+    }, false);
+  };
+
   // SVG
   svg4everybody({});
 
@@ -210,6 +227,7 @@ jQuery(document).ready(function($) {
   findVideos();
   repeatSlider();
   masonryResize();
+  disableHover();
 
   $(window).resize(function() {
     masonryResize();
