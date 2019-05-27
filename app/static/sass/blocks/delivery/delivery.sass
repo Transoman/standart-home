@@ -1,0 +1,73 @@
+.delivery
+  padding-top: 0
+  .section-title
+    margin-bottom: 40px
+  &__wrap
+    padding: 0 100px
+    +r(1200)
+      padding: 0
+  &__box-list
+    max-width: 420px
+    padding: 70px 50px 80px
+    background-color: $bg-green-color
+    list-style: none
+    margin: 0
+    +r(992)
+      margin: 0 auto 40px
+    +r(576)
+      padding: 20px
+    &-icon
+      display: inline-block
+      background-color: #fff
+      width: 36px
+      height: 36px
+      border-radius: 50%
+      text-align: center
+      line-height: 36px
+      margin-right: 25px
+      +r(576)
+        margin-right: 15px
+    li
+      margin-bottom: 30px
+      font-size: 18px
+      font-weight: 500
+      color: $title-link-color
+      +r(576)
+        margin-bottom: 20px
+        font-size: 14px
+      &:last-child
+        margin-bottom: 0
+    svg
+      fill: $link-color
+      width: 15px
+      height: 12px
+  &__content
+    ol
+      margin: 0
+      padding: 0
+      list-style: none
+      counter-reset: count
+      li
+        position: relative
+        padding-left: 15px
+        margin-bottom: 45px
+        +r(576)
+          margin-bottom: 30px
+        &:last-child
+          margin-bottom: 0
+        &::before
+          position: absolute
+          left: 0
+          counter-increment: count
+          content: counter(count) '.'
+          display: inline-block
+          vertical-align: top
+          color: $link-color
+          font-weight: 500
+        p
+          &:first-child
+            display: inline-block
+            vertical-align: top
+          strong
+            font-weight: 500
+            color: $title-link-color
