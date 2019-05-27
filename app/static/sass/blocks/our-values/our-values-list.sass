@@ -1,0 +1,45 @@
+.our-values-list
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  padding: 0 70px
+  margin: 0 -15px
+  +r(1200)
+    padding: 0
+  &__item
+    position: relative
+    width: 31.2%
+    padding: 70px 15px 0
+    margin-bottom: 90px
+    font-size: 13px
+    +r(1200)
+      width: 33.33%
+    +r(992)
+      width: 48%
+      margin-bottom: 50px
+    +r(767)
+      width: 100%
+      text-align: center
+      &:last-child
+        margin-bottom: 0
+    p
+      &:last-child
+        margin-bottom: 0
+  &__icon-wrap
+    position: absolute
+    top: 0
+    left: 15px
+    width: 60px
+    height: 60px
+    border-radius: 50%
+    background-color: rgba(#2B531D, 0.1)
+    display: flex
+    align-items: center
+    +r(767)
+      left: 50%
+      transform: translateX(-50%)
+  &__title
+    margin-bottom: 15px
+    font-size: 18px
+    font-weight: 500
+    color: #fff
