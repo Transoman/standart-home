@@ -3,7 +3,10 @@ section.form-contact
     .form-contact__wrap
       .row
         .col-md-6.col-lg-7.col-xl-5.offset-xl-1
-          h3 Свяжитесь с нами
+          if !formContactTitle
+            h3 Свяжитесь с нами
+          else
+            h3 !{formContactTitle}
           .form-contact__contact
             .form-contact__contact-item
               p.form-contact__contact-label Для абонентов Москвы и МО

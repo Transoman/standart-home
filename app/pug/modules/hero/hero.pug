@@ -2,4 +2,7 @@ section(style="background-image: url(static/images/content/hero-2.jpg)").hero.he
   .container
     .hero__content
       h1.hero__title #{title}
-      p На работе, дома или в автомобиле — технологии Standard <br> упрощают нашу повседневную жизнь
+      if heroText
+        p !{heroText}
+      else
+        p На работе, дома или в автомобиле — технологии Standard <br> упрощают нашу повседневную жизнь

@@ -1,0 +1,12 @@
+extends template/main
+
+block variables
+  - var title = 'Гарантия уверенности от standard'
+  - var pageClass = ''
+  - var heroText = 'Бытовая техника в вашем дома должна работать. Благодаря гарантийному обслуживанию <br>от Standart home любая поломка моментально устраняется нашими техническими специалистами.'
+  - var formContactTitle = 'Хотите узнать больше - <br>позвоните в наш отдел гарантии'
+
+block content
+  include modules/hero/hero
+  include pages/warranty/warranty
+  include modules/form/form-contact
