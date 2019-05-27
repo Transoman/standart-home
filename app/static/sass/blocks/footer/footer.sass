@@ -5,6 +5,10 @@
   background-color: $bg-color
   +r(480)
     padding: 40px 0 0
+  a
+    color: #464646
+    &:hover, &:focus
+      color: lighten($link-color, 5%)
   .container
     display: flex
     justify-content: space-between
@@ -42,10 +46,11 @@
       margin-bottom: 10px
       &:last-child
         margin-bottom: 0
-    a
-      color: #464646
-      &:hover, &:focus
-        color: lighten($link-color, 5%)
+    // a
+    //   color: #464646
+    //   &:hover, &:focus
+    //     color: lighten($link-color, 5%)
   &__social
+    margin-top: 20px
     +r(480)
       justify-content: center
