@@ -1,0 +1,53 @@
+.payments-list
+  background-color: $bg-color
+  display: flex
+  justify-content: space-between
+  padding: 50px 50px 45px
+  +r(992)
+    flex-direction: column
+  +r(576)
+    padding: 30px
+  &__item
+    position: relative
+    color: $title-link-color
+    +r(992)
+      margin-bottom: 40px
+      text-align: center
+    &::after
+      content: ''
+      position: absolute
+      left: 130px
+      top: 30px
+      width: 200px
+      height: 1px
+      background-color: #fff
+      +r(1200)
+        left: 100px
+        width: 140px
+      +r(992)
+        display: none
+    &:last-child
+      +r(992)
+        margin-bottom: 0
+      &::after
+        display: none
+    p
+      &:last-child
+        margin-bottom: 0
+  &__number
+    display: block
+    width: 60px
+    height: 60px
+    margin-bottom: 30px
+    border-radius: 50%
+    border: 2px solid $bg-green-color
+    background-color: #fff
+    font-size: 24px
+    font-weight: 700
+    color: $link-color
+    text-align: center
+    line-height: 56px
+    +r(992)
+      margin: 0 auto 20px
+  &__title
+    margin-bottom: 10px
