@@ -4,6 +4,9 @@
   margin-bottom: 30px
   z-index: 1
   overflow: hidden
+  +r(992)
+    display: flex
+    flex-direction: column
   &::before
     content: ''
     position: absolute
@@ -19,6 +22,8 @@
   img
     width: 100%
     height: 100%
+    +r(992)
+      height: auto
   &__title
     position: absolute
     top: 50%
@@ -32,6 +37,11 @@
     font-size: 18px
     font-weight: 700
     color: #fff
+    +r(992)
+      top: 0
+      left: 0
+      transform: none
+      height: auto
     +r(576)
       padding: 15px
       font-size: 16px
@@ -47,10 +57,20 @@
     font-size: 13px
     background-color: $light-accent-color
     +trans
+    +r(992)
+      position: relative
+      flex-grow: 1
+      transform: translateY(0)
+      height: 250px
     +r(576)
+      height: 220px
       padding: 15px
   &__content
     height: calc(100% - 25px)
+    +r(992)
+      height: 160px
+    +r(576)
+      height: 155px
     h3
       font-size: 18px
       font-weight: 700
