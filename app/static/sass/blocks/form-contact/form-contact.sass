@@ -1,0 +1,48 @@
+.form-contact
+  padding-top: 0
+  padding-bottom: 110px
+  +r(767)
+    padding-bottom: 40px
+  &__wrap
+    border-top: 1px solid $bd-color
+    padding-top: 50px
+    +r(767)
+      h3
+        text-align: center
+  &__contact
+    display: flex
+    margin-top: 30px
+    +r(992)
+      flex-direction: column
+    +r(767)
+      margin-bottom: 30px
+      text-align: center
+    & > *:not(:last-child)
+      margin-right: 60px
+      +r(992)
+        margin-right: 0
+        margin-bottom: 20px
+    &-item
+      a
+        font-size: 20px
+        font-weight: 700
+        color: $title-link-color
+        &:hover, &:focus
+          color: lighten($link-color, 5%)
+    &-label
+      margin-bottom: 5px
+      font-size: 16px
+  &__form
+    .form-field
+      background-color: #fff
+      font-size: 14px
+      padding:
+        top: 15px
+        bottom: 15px
+    .btn-flat
+      width: 100%
+      color: #fff
+      background-color: #74AE06
+      &:hover, &:focus
+        color: #fff
+        background-color: $video-btn-color
