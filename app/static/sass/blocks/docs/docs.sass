@@ -1,0 +1,50 @@
+.docs-list
+  display: flex
+  flex-wrap: wrap
+  border-radius: 16px
+  border: 1px solid $bd-color
+  overflow: hidden
+  &__item
+    position: relative
+    width: 25%
+    padding: 120px 30px 30px
+    text-align: center
+    border-right: 1px solid $bd-color
+    +r(992)
+      width: 50%
+      border-bottom: 1px solid $bd-color
+      &:nth-child(2n)
+        border-right: 0
+      &:nth-last-child(-n+2)
+        border-bottom: 0
+    +r(576)
+      width: 100%
+      border-right: 0
+      padding: 60px 15px 15px
+      &:nth-last-child(-n+2)
+        border-bottom: 1px solid $bd-color
+      &:last-child
+        border-bottom: 0
+    &:last-child
+      border: 0
+    &:hover
+      background-color: $bg-color
+      .docs-list
+        &__title
+          text-decoration: underline
+  &__icon
+    fill: $link-color
+    width: 45px
+    height: 60px
+    position: absolute
+    top: 30px
+    left: 50%
+    margin-left: -22.5px
+    +r(576)
+      width: 25px
+      height: 30px
+      margin-left: -12.5px
+      top: 15px
+  &__title
+    font-size: 16px
+    color: $title-link-color
