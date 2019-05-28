@@ -7,7 +7,8 @@ fancybox = require('@fancyapps/fancybox'),
 Masonry = require('masonry-layout'),
 imagesLoaded = require('imagesloaded'),
 jQueryBridget = require('jquery-bridget'),
-Simplebar = require('simplebar');
+Simplebar = require('simplebar'),
+Tabslet = require('tabslet');
 
 jQuery(document).ready(function($) {
 
@@ -178,11 +179,8 @@ jQuery(document).ready(function($) {
         slidesPerView: 5,
         spaceBetween: 4,
         breakpoints: {
-          1200: {
-            slidesPerView: 4
-          },
           992: {
-            slidesPerView: 3
+            slidesPerView: 4
           },
           767: {
             slidesPerView: 5
@@ -204,6 +202,28 @@ jQuery(document).ready(function($) {
       if ($('.product-slider').length) {
         productSlider.slideTo( instance.currIndex);
       }
+    }
+  });
+
+  new Swiper('.product-gallery-slider', {
+    spaceBetween: 30,
+    slidesPerView: 3,
+    speed: 1000,
+    loop: true,
+    autoplay: {
+      delay: 3000,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+      767: {
+        slidesPerView: 2
+      },
+      576: {
+        slidesPerView: 1
+      },
     }
   });
 
@@ -279,6 +299,11 @@ jQuery(document).ready(function($) {
 
     }
   };
+
+  // Tabs
+  $('.product-tabs').tabslet({
+    animation: true
+  });
 
   // SVG
   svg4everybody({});

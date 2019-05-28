@@ -56,3 +56,32 @@
     height: 4px
     border-radius: 50%
     background-color: $video-btn-color
+
+.swiper-btns
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: center
+  margin-top: -15px
+  .swiper-button-next,
+  .swiper-button-prev
+    position: static
+    width: 80px
+    height: 40px
+    margin: 0 5px
+    padding: 0
+    background: $dark
+    text-align: center
+    line-height: 40px
+    +trans
+    &:hover, &:focus
+      background-color: lighten($dark, 15%)
+      outline: none
+    svg
+      width: 16px
+      height: 16px
+      fill: #fff
+      +trans
+  .swiper-button-prev
+    svg
+      transform: rotate(180deg)

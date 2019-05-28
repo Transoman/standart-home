@@ -3,6 +3,9 @@ extends template/main
 block variables
   - var title = 'Standard home model m'
   - var pageClass = ''
+  - var titleForm = 'Какой диспоузер мне подойдет?'
 
 block content
   include pages/product/product
+  include pages/product/gallery
+  include modules/form/form-how
