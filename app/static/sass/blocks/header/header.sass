@@ -13,18 +13,60 @@
       margin-right: 70px
     +r(767)
       margin-right: 30px
+      .logo
+        &__head
+          letter-spacing: -2px
+          span
+            display: none
+        &__descr
+          display: none
+    +r(480)
+      margin-right: 10px
+      .logo
+        &__head
+          font-size: 14px
   &__phone
     margin-right: 90px
     +r(1200)
       margin-right: 40px
     +r(992)
       margin-left: auto
-      margin-right: 50px
-    +r(576)
-      display: none
+      flex-direction: column
+      text-align: right
+      .phone
+        &__item
+          width: 100%
+          margin-right: 0
+    +r(767)
+      .phone
+        &__item
+          margin-right: 0
+          &:nth-child(2)
+            display: none
+        &__icon
+          display: none
+    +r(480)
+      margin-right: 10px
+      .phone
+        &__tel
+          font-size: 11px
   &__small-contact
     margin-left: auto
     +r(992)
-      display: none
+      margin-right: 50px
+      margin-left: 0
+      .small-contact
+        &__item
+          padding: 0
+          margin: 0
+          &:nth-child(1)
+            display: none
+        &__icon
+          display: none
+    +r(480)
+      margin-right: 30px
+      .small-contact
+        &__item
+          font-size: 10px
   &__bottom
     +bgl

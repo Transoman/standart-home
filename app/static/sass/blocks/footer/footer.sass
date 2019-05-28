@@ -29,6 +29,11 @@
     +r(480)
       width: 100%
       text-align: center
+      &:nth-child(1)
+        .footer__title, & > a
+          display: none
+      &:nth-child(3), &:nth-child(4)
+        display: none
     &:first-child
       padding-left: 70px
       +r(1200)
@@ -46,11 +51,8 @@
       margin-bottom: 10px
       &:last-child
         margin-bottom: 0
-    // a
-    //   color: #464646
-    //   &:hover, &:focus
-    //     color: lighten($link-color, 5%)
   &__social
     margin-top: 20px
     +r(480)
       justify-content: center
+      margin-top: 0
