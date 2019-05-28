@@ -170,6 +170,43 @@ jQuery(document).ready(function($) {
 
   };
 
+  let productSlider = new Swiper('.product-slider', {
+    spaceBetween: 30,
+    thumbs: {
+      swiper: {
+        el: '.product-thumb-slider',
+        slidesPerView: 5,
+        spaceBetween: 4,
+        breakpoints: {
+          1200: {
+            slidesPerView: 4
+          },
+          992: {
+            slidesPerView: 3
+          },
+          767: {
+            slidesPerView: 5
+          },
+          480: {
+            slidesPerView: 3
+          },
+        }
+      }
+    }
+  });
+
+  $().fancybox({
+    selector : '.product-slider__link',
+    thumbs   : false,
+    hash     : false,
+    loop: true,
+    beforeClose : function(instance) {
+      if ($('.product-slider').length) {
+        productSlider.slideTo( instance.currIndex);
+      }
+    }
+  });
+
   // Masonry
   let grid = $('.problem-list').masonry({
     itemSelector: '.problem-list__item',
