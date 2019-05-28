@@ -4,7 +4,7 @@
     align-items: flex-start
     margin-bottom: 30px
     +r(576)
-      flex-direction: column-reverse
+      flex-direction: column
       align-items: center
       text-align: center
     &:last-child
@@ -15,19 +15,32 @@
       +r(576)
         margin:
           left: 0
-          bottom: 20px
+          // bottom: 20px
   &__content
     color: #444
+    +r(576)
+      margin-bottom: 20px
     p
       margin-bottom: 0
       span
         font-weight: 500
         color: $step-accent-color
   &__step
+    position: absolute
+    top: 0
+    left: 0
     margin: 0
     font-size: 16px
     font-weight: 500
     color: $step-accent-color
+    +r(576)
+      position: static
+      top: auto
+      left: auto
   &__title
+    position: relative
+    padding-top: 20px
     margin-bottom: 20px
     font-size: 18px
+    +r(576)
+      padding-top: 0

@@ -219,6 +219,30 @@ jQuery(document).ready(function($) {
     }, false);
   };
 
+  let toggleAdvantages = function() {
+    let items = $('.advantages-list__item');
+    let btn = $('.s-advantages__btn');
+
+    if(items.length) {
+
+      items.each(function(i, el) {
+        if (i >= 3) {
+          $(this).hide();
+        }
+      });
+
+      btn.click(function(e) {
+        e.preventDefault();
+        items.each(function(i, el) {
+          if (i >= 3) {
+            $(el).slideDown();
+          }
+        });
+      });
+
+    }
+  };
+
   // SVG
   svg4everybody({});
 
@@ -228,6 +252,7 @@ jQuery(document).ready(function($) {
   repeatSlider();
   masonryResize();
   disableHover();
+  toggleAdvantages();
 
   $(window).resize(function() {
     masonryResize();

@@ -30,8 +30,11 @@
   &__img-wrap
     flex-shrink: 0
     min-width: 220px
+    background-color: #fff
     +r(1200)
       flex-shrink: 1
+    +r(480)
+      text-align: center
     img
       height: 100%
       width: 100%
@@ -39,6 +42,8 @@
       object-position: right center
       +r(767)
         height: auto
+      +r(480)
+        width: auto
   &--services
     .info-card
       &__title
