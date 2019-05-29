@@ -1,0 +1,24 @@
+.vacancy
+  padding-bottom: 50px
+  &__wrap
+    @extend .warranty__wrap
+  &__item
+    @extend .warranty__item
+    display: flex
+    flex-direction: column
+    height: 100%
+    +r(767)
+      height: auto
+    &--green
+      @extend .warranty__item--green
+    .btn-flat
+      margin-top: auto
+  &__icon-wrap
+    @extend .warranty__icon-wrap
+  &__title
+    @extend .warranty__title
+  &__map
+    margin-top: 80px
+    height: 360px
+    +r(767)
+      margin-top: 50px

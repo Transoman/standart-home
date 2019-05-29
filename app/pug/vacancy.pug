@@ -1,0 +1,10 @@
+extends template/main
+
+block variables
+  - var title = 'Вакансии'
+  - var pageClass = ''
+  - var formContactTitle = 'Хотите узнать больше - <br>позвоните в наш отдел'
+
+block content
+  include pages/vacancy/vacancy
+  include modules/form/form-contact

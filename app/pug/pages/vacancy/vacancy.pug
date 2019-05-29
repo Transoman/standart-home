@@ -1,0 +1,46 @@
+section.vacancy
+  .container
+    .section-head
+      h2.section-title Вакансии
+      p Отправьте ваше резюме на <a href="mailto:job@tradest.ru">job@tradest.ru</a> чтобы стать частью нашей команды
+
+    .vacancy__wrap
+      .row
+        .col-md-6
+          .vacancy__item
+            .vacancy__icon-wrap
+              img(src="static/images/content/search-vacancy.svg", alt="")
+            h3.vacancy__title Стажер в отдел импорта
+
+            a(href="#").btn-flat.btn-flat--black Подробнее
+
+        .col-md-6
+          .vacancy__item.vacancy__item--green
+            .vacancy__icon-wrap
+              img(src="static/images/content/search-vacancy.svg", alt="")
+            h3.vacancy__title Менеджер по международной логистике
+            a(href="#").btn-flat.btn-flat--black Подробнее
+
+    #contact-map.vacancy__map
+
+  script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")
+  script.
+    ymaps.ready(init);
+
+    var myMap, myPlacemark,
+      coords = [55.748513, 37.627229];
+
+    function init() {
+      myMap = new ymaps.Map('contact-map', {
+        center: coords,
+        zoom: 17
+      });
+
+      myPlacemark = new ymaps.Placemark(coords, {}, {
+        preset: 'islands#circleDotIcon',
+        iconColor: '#fe3334'
+      });
+
+      myMap.geoObjects.add(myPlacemark);
+
+    }
