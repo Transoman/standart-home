@@ -1,0 +1,30 @@
+.clients
+  &__wrap
+    padding: 0 70px
+    +r(1200)
+      padding: 0
+  &__card-list
+    display: flex
+    flex-wrap: wrap
+    border-radius: 16px
+    border: 1px solid $bd-color
+    .icon-box
+      width: 50%
+      border-right: 1px solid $bd-color
+      border-bottom: 1px solid $bd-color
+      padding-right: 85px
+      +r(992)
+        padding-right: 45px
+      +r(767)
+        width: 100%
+        border-right: 0
+      +r(576)
+        padding-right: 15px
+      &:nth-child(2n)
+        border-right: 0
+      &:nth-last-child(-n+2)
+        border-bottom: 0
+        +r(992)
+          border-bottom: 1px solid $bd-color
+      &:last-child
+        border-bottom: 0
