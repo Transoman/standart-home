@@ -5,3 +5,51 @@
   .line
     margin-top: 20px
     margin-bottom: 0
+
+.faq
+  padding-top: 145px
+  +r(767)
+    padding-top: 100px
+
+.faq-list
+  &__item
+    padding: 27px 30px
+    border-bottom: 1px solid $bd-color
+    color: $title-link-color
+    +r(576)
+      padding: 15px
+    +trans
+    &.active
+      background-color: $bg-green-color
+      border-color: $bg-green-color
+      .faq-list
+        &__title
+          &::before
+            transform: rotate(90deg)
+  &__title
+    position: relative
+    margin: 0
+    padding-right: 30px
+    font-size: 18px
+    cursor: pointer
+    +r(576)
+      font-size: 16px
+    &::before, &::after
+      content: ''
+      position: absolute
+      background-color: $link-color
+      +trans
+    &::before
+      right: 7px
+      top: 5px
+      width: 2px
+      height: 16px
+      border-radius: 2px
+    &::after
+      height: 2px
+      width: 16px
+      right: 0
+      top: 12px
+  &__content
+    display: none
+    margin-top: 20px

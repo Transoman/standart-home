@@ -2,7 +2,10 @@
   .form-box
     .section-head
       h2.section-title #{titleForm}
-      p Наши консультанты Вам перезвонят!
+      if !textForm
+        p Наши консультанты Вам перезвонят!
+      else
+        p !{textForm}
 
     form.form-box__form
       .row

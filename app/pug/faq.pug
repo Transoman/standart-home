@@ -1,0 +1,12 @@
+extends template/main
+
+block variables
+  - var title = 'Часто задаваемые вопросы'
+  - var pageClass = ''
+  - var titleForm = 'Есть вопросы? Напишите нам'
+  - var textForm = 'Наши специалисты готовы проконсультировать вас по любым вопросам <br>в области ремонта и отделки помещения любого уровня.'
+
+block content
+  include modules/hero/hero
+  include pages/faq/faq
+  include modules/form/form-how

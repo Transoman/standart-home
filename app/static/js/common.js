@@ -305,6 +305,28 @@ jQuery(document).ready(function($) {
     animation: true
   });
 
+  // Accordion
+  let accordion = function() {
+    let el = $('.faq-list__item');
+    let elTitle = $('.faq-list__title');
+    let content = $('.faq-list__content');
+
+    $('.faq-list__item.active').find(content).slideDown(500);
+
+    elTitle.click(function() {
+      if ($(this).parent().hasClass('active')) {
+        $(this).parent().removeClass('active');
+        $(this).next().slideUp(500);
+      }
+      else {
+        $(this).parent().addClass('active');
+        content.not($(this).next()).slideUp(500);
+        elTitle.not($(this)).parent().removeClass('active');
+        $(this).next().slideDown(500);
+      }
+    });
+  };
+
   // SVG
   svg4everybody({});
 
@@ -315,6 +337,7 @@ jQuery(document).ready(function($) {
   masonryResize();
   disableHover();
   toggleAdvantages();
+  accordion();
 
   $(window).resize(function() {
     masonryResize();
