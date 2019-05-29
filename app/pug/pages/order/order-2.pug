@@ -1,0 +1,58 @@
+section.order.order--2
+  .container
+    .order__wrap
+
+      form.order__form
+
+        section.order__form-wrap-bg
+          h2.section-title.section-title--sm Ваш заказ
+
+          .checkout-table
+            .checkout-table__head
+              span.checkout-table__head-item Товар
+            .checkout-table__body
+              p Стабилизаторы «ИнСтаб» 350–550 ВА - IS350 × 1
+
+          .checkout-table
+            .checkout-table__head
+              span.checkout-table__head-item Товар
+              span.checkout-table__head-item Итого
+            .checkout-table__footer
+              span.checkout-table__footer-label Самовывоз
+              span.checkout-table__footer-total 4 956 РУБ.
+
+          .text-center
+            input(type="submit", value="Оставить заявку").btn-flat.btn-flat--black
+
+        .text-center
+          span.btn Не хотите общаться с консультантом?
+
+        section.order__form-wrap-bg-2
+          h2.section-title Оставить заявку
+          .row
+            .col-lg-10.offset-lg-1.col-xl-8.offset-xl-2
+              .row
+                .col-md-6
+                  .form-group
+                    input(type="text", name="name", placeholder="Ваше Имя", required).form-field
+                .col-md-6
+                  .form-group
+                    input(type="text", name="surname", placeholder="Ваша Фамилия", required).form-field
+                .col-md-6
+                  .form-group
+                    input(type="tel", name="phone", placeholder="Ваш телефон", required).form-field
+                .col-md-6
+                  .form-group
+                    input(type="email", name="email", placeholder="Ваш Email", required).form-field
+                .col-md-12
+                  .form-group
+                    input(type="text", name="address", placeholder="Ваш адрес", required).form-field
+                .col-md-12
+                  .form-group
+                    input(type="text", name="legal_address", placeholder="Юридический адрес (для Юр.лиц)").form-field
+                .col-md-6
+                  .form-group
+                    input(type="text", name="inn", placeholder="ИНН (для Юр.лиц)").form-field
+                .col-md-12
+                  .form-group
+                    textarea(name="message", placeholder="Ваш коментарий").form-field.form-field--textarea

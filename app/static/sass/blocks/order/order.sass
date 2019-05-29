@@ -60,3 +60,80 @@
   &__title
     margin-bottom: 15px
     font-size: 14px
+
+
+.order
+  &__form
+    margin-bottom: 80px
+    +r(767)
+      margin-bottom: 50px
+    .form-group
+      margin-bottom: 30px
+      +r(767)
+        margin-bottom: 20px
+    .form-field
+      &--textarea
+        height: 120px
+    &-wrap-bg
+      margin-top: 50px
+      padding: 60px 0 55px
+      background-color: $bg-color
+      +r(767)
+        padding: 40px 0 50px
+      .section-title--sm
+        font-size: 36px
+        +r(767)
+          font-size: 26px
+        +r(480)
+          font-size: 22px
+    &-wrap-bg-2
+      margin-top: 80px
+      background-color: $bg-color
+      +r(767)
+        padding-bottom: 20px
+      .form-field
+        background-color: #fff
+      > .row
+        +r(992)
+          margin: 0
+  &--2
+    .order__form
+      margin-bottom: 0
+      &-wrap-bg
+        margin-top: 0
+        margin-bottom: 80px
+
+.checkout-table
+  max-width: 630px
+  margin: 0 auto 50px
+  +r(767)
+    margin: 0 15px 50px
+  &__head
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 5px 30px
+    background-color: #DFDFDF
+    color: $title-link-color
+  &__body
+    padding: 20px 30px 55px
+    font-size: 16px
+    color: $title-link-color
+    background-color: #fff
+    +r(767)
+      padding:
+        right: 15px
+        left: 15px
+  &__footer
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 20px 30px
+    font-weight: 500
+    background-color: #fff
+    +r(767)
+      padding:
+        right: 15px
+        left: 15px
+    &-total
+      font-size: 16px

@@ -1,0 +1,12 @@
+extends template/main
+
+block variables
+  - var title = 'Standard home'
+  - var pageClass = ''
+  - var titleForm = 'Какой диспоузер мне подойдет?'
+  - var textForm = 'Наши консультанты Вам перезвонят!'
+
+block content
+  include modules/hero/hero
+  include pages/order/order
+  include modules/form/form-how
