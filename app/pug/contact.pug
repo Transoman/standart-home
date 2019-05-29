@@ -1,0 +1,11 @@
+extends template/main
+
+block variables
+  - var title = 'Наши контакты'
+  - var pageClass = ''
+  - var titleForm = 'Какой диспоузер мне подойдет?'
+
+block content
+  include modules/hero/hero
+  include pages/contact/contact
+  include modules/form/form-how

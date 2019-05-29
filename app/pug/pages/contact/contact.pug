@@ -1,0 +1,97 @@
+section.contact
+  .container
+    .line
+
+    .contact__top
+      .contact__item.contact__item--address
+        h4.contact__item-title
+          +icon('location', 'contact__item-title-icon')
+          |  Адрес:
+        p 1-й Красносельский переулок, дом 7/9а стр 11. , 2 этаж, офис 24, Офис продаж EMERSON RUS. <span>(бесплатная парковка для клиентов)</span>
+
+      ul.social.contact__social
+        li
+          a(href="https://facebook.com", target="_blank")
+            +icon('fb', 'social__icon')
+        li
+          a(href="https://vk.com", target="_blank")
+            +icon('vk', 'social__icon')
+        li
+          a(href="https://instagram.com", target="_blank")
+            +icon('insta', 'social__icon')
+
+    #contact-map.contact__map
+
+    .line.line--2
+
+    .row
+      .col-sm-6.col-lg-3
+        .contact__item
+          h4.contact__item-title
+            +icon('phone', 'contact__item-title-icon')
+            |  Телефоны:
+          .contact__item-content
+            p
+              a(href="tel:84952151353") 8 (495) 215-13-53<br>
+              span Отдел оптовых и розничных продаж<br>
+              a(href="tel:88007073385") 8 (800) 707-33-85
+      .col-sm-6.col-lg-3
+        .contact__item
+          h4.contact__item-title
+            +icon('web', 'contact__item-title-icon')
+            |  Сайт:
+          .contact__item-content
+            p
+              a(href="https://emerson-rus.ru", target="_blank") emerson-rus.ru<br>
+              span Официальный сайт Компании<br>
+              a(href="https://insinkerator.su", target="_blank") insinkerator.su
+      .col-sm-6.col-lg-3
+        .contact__item
+          h4.contact__item-title
+            +icon('mail', 'contact__item-title-icon')
+            |  e-mail:
+          .contact__item-content
+            p
+              a(href="mailto:shop@insinkerator.su") shop@insinkerator.su<br>
+              span Отдел оптовых и розничных продаж<br>
+            p
+              a(href="mailto:dir@insinkerator.su", target="_blank") dir@insinkerator.su<br>
+              span Дилерам и Партнерам
+      .col-sm-6.col-lg-3
+        .contact__item
+          h4.contact__item-title
+            +icon('clock', 'contact__item-title-icon')
+            |  Часы работы:
+          .contact__item-content
+            p <strong>пн-пт: 9:00 до 19:00 <br>сб-вс: 10:00 до 18:00</strong><br>
+              span  (офис продаж работает <br>по предварительной <br>договоренности)
+      .col-sm-6.col-lg-3
+        .contact__item
+          h4.contact__item-title
+            +icon('skype', 'contact__item-title-icon')
+            |  Skype:
+          .contact__item-content
+            a(href="skype:emerson-russia?chat") Emerson Russia
+
+
+  script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")
+  script.
+    ymaps.ready(init);
+
+    var myMap, myPlacemark,
+      coords = [55.748513, 37.627229];
+
+    function init() {
+      myMap = new ymaps.Map('contact-map', {
+        center: coords,
+        zoom: 17
+      });
+
+      myPlacemark = new ymaps.Placemark(coords, {}, {
+        preset: 'islands#circleDotIcon',
+        iconColor: '#fe3334'
+      });
+
+      myMap.geoObjects.add(myPlacemark);
+
+    }
