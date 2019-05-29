@@ -1,0 +1,40 @@
+.service-centers
+  .line
+    margin-bottom: 30px
+  &__form
+    margin-bottom: 50px
+    +r(992)
+      margin-top: 30px
+    .form-field
+      padding:
+        top: 10px
+        bottom: 10px
+      background-color: #fff
+      font-size: 14px
+  &__map
+    height: 570px
+    +r(576)
+      height: 400px
+
+.service-centers-list
+  +r(992)
+    margin-bottom: 30px
+  &__item
+    margin-bottom: 30px
+    padding-top: 20px
+    border-top: 1px solid $bd-color
+    &:last-child
+      margin-bottom: 0
+  &__title
+    margin-bottom: 15px
+    font-size: 16px
+    font-weight: 500
+  &__contact
+    margin: 0
+    b
+      font-weight: 500
+      color: $title-link-color
+    a
+      color: inherit
+      &:hover, &:focus
+        color: lighten($link-color, 5%)

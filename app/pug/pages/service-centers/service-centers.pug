@@ -1,0 +1,60 @@
+section.service-centers
+  .container
+    .line
+
+    .row
+      .col-lg-6
+        h3 Найти сервисный центр
+        p Найдите место для сервисного обслуживания своего прибора
+      .col-lg-6
+        form.service-centers__form
+          .form-group
+            label(for="sc").form-label Введите адрес / город
+            input(type="text", name="service_center_name", id="sc", placeholder="Например: г. Москва").form-field
+
+    .row
+      .col-lg-6
+        .service-centers-list
+          .service-centers-list__item
+            h4.service-centers-list__title г. Москва (Шоу-рум)
+            p.service-centers-list__contact Адрес: <b>г. Москва, ул. Дорожная, дом 60, этаж 5, офис 1</b>
+            p.service-centers-list__contact Телефон: <b><a href="tel:+74994907288">+7(499)490-72-88</a></b>
+            p.service-centers-list__contact E-mail: <b><a href="mailto:sale@kamin-v-dome.ru">sale@kamin-v-dome.ru</a></b>
+          .service-centers-list__item
+            h4.service-centers-list__title г. Москва (Шоу-рум)
+            p.service-centers-list__contact Адрес: <b>г. Москва, ул. Дорожная, дом 60, этаж 5, офис 1</b>
+            p.service-centers-list__contact Телефон: <b>+7(499)490-72-88</b>
+            p.service-centers-list__contact E-mail: <b>sale@kamin-v-dome.ru</b>
+          .service-centers-list__item
+            h4.service-centers-list__title г. Москва (Шоу-рум)
+            p.service-centers-list__contact Адрес: <b>г. Москва, ул. Дорожная, дом 60, этаж 5, офис 1</b>
+            p.service-centers-list__contact Телефон: <b>+7(499)490-72-88</b>
+            p.service-centers-list__contact E-mail: <b>sale@kamin-v-dome.ru</b>
+          .service-centers-list__item
+            h4.service-centers-list__title г. Москва (Шоу-рум)
+            p.service-centers-list__contact Адрес: <b>г. Москва, ул. Дорожная, дом 60, этаж 5, офис 1</b>
+            p.service-centers-list__contact Телефон: <b>+7(499)490-72-88</b>
+            p.service-centers-list__contact E-mail: <b>sale@kamin-v-dome.ru</b>
+      .col-lg-6
+        #sc-map.service-centers__map
+
+  script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")
+  script.
+    ymaps.ready(init);
+
+    var myMap, myPlacemark;
+
+    function init() {
+      myMap = new ymaps.Map('sc-map', {
+        center: [55.76499601, 37.36425042],
+        zoom: 17
+      });
+
+      myPlacemark = new ymaps.Placemark([55.76499601, 37.36425042], {}, {
+        preset: 'islands#circleDotIcon',
+        iconColor: '#fe3334'
+      });
+
+      myMap.geoObjects.add(myPlacemark);
+
+    }

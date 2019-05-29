@@ -1,0 +1,12 @@
+extends template/main
+
+block variables
+  - var title = 'Расширеный сервис'
+  - var pageClass = ''
+  - var titleForm = 'Какой диспоузер мне подойдет?'
+  - var heroText = 'Бытовая техника в вашем дома должна работать. Благодаря гарантийному обслуживанию <br>от Standart home любая поломка моментально устраняется'
+
+block content
+  include modules/hero/hero
+  include pages/service-centers/service-centers
+  include modules/form/form-how
