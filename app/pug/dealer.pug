@@ -1,0 +1,11 @@
+extends template/main
+
+block variables
+  - var title = 'Дилерская программа'
+  - var pageClass = ''
+  - var titleForm = 'Есть вопросы? Напишите нам'
+
+block content
+  include modules/hero/hero
+  include pages/dealer/dealer
+  include modules/form/form-how
