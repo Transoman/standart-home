@@ -3,7 +3,8 @@ section.s-order
     .s-order__wrap
       h2.section-title Оффер заказ
 
-      form.s-order__form
+      form.ajax-form.s-order__form
+        input(type="hidden", name="subject", value="Заявка с сайта")
         .row
           .col-md-4
             .form-group

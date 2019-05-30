@@ -3,7 +3,10 @@ section.order
     .order__wrap
       h2.section-title Оставить заявку
 
-      form.order__form
+      form.ajax-form.order__form
+        input(type="hidden", name="subject", value="Оформление заказа")
+        input(type="hidden", name="products_name[]", value="Стабилизаторы «ИнСтаб» 350–550 ВА - IS350 × 1")
+        input(type="hidden", name="products_name[]", value="Стабилизаторы «ИнСтаб» 2500–550 ВА - IS350 × 3")
         .row
           .col-lg-10.offset-lg-1.col-xl-8.offset-xl-2
             .row

@@ -327,6 +327,38 @@ jQuery(document).ready(function($) {
     });
   };
 
+  // Send forms
+  var getProductName = function() {
+    var productName;
+    $('.product-order_open').click(function() {
+      productName = $(this).parents('.product-card').find('.product-card__title').text();
+      $('#product-order input[name="product_name"]').val(productName);
+    });
+  };
+
+  getProductName();
+
+  $('.ajax-form').submit(function(e) {
+    e.preventDefault();
+    var data = $(this).serialize();
+    ajaxSend($('.ajax-form'), data);
+  });
+
+  function ajaxSend(formName, data) {
+    jQuery.ajax({
+      type: "POST",
+      url: "sendmail.php",
+      data: data,
+      success: function() {
+        $(".modal").popup("hide");
+        $("#thanks").popup("show");
+        setTimeout(function() {
+          $(formName).trigger('reset');
+        }, 2000);
+      }
+    });
+  }
+
   // SVG
   svg4everybody({});
 
