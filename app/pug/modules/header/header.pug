@@ -3,21 +3,19 @@ header.header
     .container
       a(href="./").logo.header__logo
         span.logo__head S<span>tandard</span> H<span>ome</span>
-        p.logo__descr Здесь будет текст
+        p.logo__descr Кухонные измельчители
 
       .phone.header__phone
         .phone__item
           a(href="tel:+74951084961").phone__tel
             +icon('phone', 'phone__icon')
-            | +7 495 108 49 61
-        .phone__item
-          a(href="tel:0800202222").phone__tel 0 800 20 2222<br>
+            | +7 495 108 49 61<br>
           a(href="#").phone__callback.callback_open Обратный звонок
 
       .small-contact.header__small-contact
         .small-contact__item
           +icon('mail', 'small-contact__icon')
-          a(href="mailto:mail@mail.com") mail@mail.com
+          a(href="mailto:info@standard-home.ru") info@standard-home.ru
         .small-contact__item
           +icon('location', 'small-contact__icon small-contact__icon--location')
           p 115035,Россия, Москва, <br>Раушская наб., 4/5, блок 3-15
@@ -30,10 +28,15 @@ header.header
       nav.nav.header__nav
         button(type="button").btn-close
         ul.nav-list
-          li
+          li.has-submenu
             a(href="./") Главная
+            ul.sub-menu
+              li
+                a(href="lp-2.html") LP2
+              li
+                a(href="main.html") Главная 2
           li
-            a(href="products.html") Продукция
+            a(href="products.html") Товары
           li.has-submenu
             a(href="services.html") Сервис и Услуги
             ul.sub-menu
@@ -52,8 +55,13 @@ header.header
                 a(href="blog.html") Блог
               li
                 a(href="dealer.html") Дилерская программа
-          li
+              li
+                a(href="vacancy.html") Вакансии
+          li.has-submenu
             a(href="useful.html") Полезная информация
+            ul.sub-menu
+              li
+                a(href="faq.html") FAQ
           li
             a(href="corporative-clients.html") Корпоративным клиентам
         .header-search
@@ -67,15 +75,13 @@ header.header
           .phone__item
             a(href="tel:+74951084961").phone__tel
               +icon('phone', 'phone__icon')
-              | +7 495 108 49 61
-          .phone__item
-            a(href="tel:0800202222").phone__tel 0 800 20 2222<br>
+              | +7 495 108 49 61<br>
             a(href="#").phone__callback.callback_open Обратный звонок
 
         .small-contact.nav__small-contact
           .small-contact__item
             +icon('mail', 'small-contact__icon')
-            a(href="mailto:mail@mail.com") mail@mail.com
+            a(href="mailto:info@standard-home.ru") info@standard-home.ru
           .small-contact__item
             +icon('location', 'small-contact__icon small-contact__icon--location')
             p 115035,Россия, Москва, <br>Раушская наб., 4/5, блок 3-15

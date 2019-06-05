@@ -16,22 +16,26 @@ section.service-centers
       .col-lg-6
         .service-centers-list
           .service-centers-list__item
-            h4.service-centers-list__title г. Москва (Шоу-рум)
+            h4.service-centers-list__title
+              a(href="#" data-lat="55.739096" data-lng="37.747150") г. Москва (Шоу-рум) 1
             p.service-centers-list__contact Адрес: <b>г. Москва, ул. Дорожная, дом 60, этаж 5, офис 1</b>
             p.service-centers-list__contact Телефон: <b><a href="tel:+74994907288">+7(499)490-72-88</a></b>
             p.service-centers-list__contact E-mail: <b><a href="mailto:sale@kamin-v-dome.ru">sale@kamin-v-dome.ru</a></b>
           .service-centers-list__item
-            h4.service-centers-list__title г. Москва (Шоу-рум)
+            h4.service-centers-list__title
+              a(href="#" data-lat="55.770899" data-lng="37.403070") г. Москва (Шоу-рум) 2
             p.service-centers-list__contact Адрес: <b>г. Москва, ул. Дорожная, дом 60, этаж 5, офис 1</b>
             p.service-centers-list__contact Телефон: <b>+7(499)490-72-88</b>
             p.service-centers-list__contact E-mail: <b>sale@kamin-v-dome.ru</b>
           .service-centers-list__item
-            h4.service-centers-list__title г. Москва (Шоу-рум)
+            h4.service-centers-list__title
+              a(href="#" data-lat="55.897581" data-lng="37.399027") г. Москва (Шоу-рум) 3
             p.service-centers-list__contact Адрес: <b>г. Москва, ул. Дорожная, дом 60, этаж 5, офис 1</b>
             p.service-centers-list__contact Телефон: <b>+7(499)490-72-88</b>
             p.service-centers-list__contact E-mail: <b>sale@kamin-v-dome.ru</b>
           .service-centers-list__item
-            h4.service-centers-list__title г. Москва (Шоу-рум)
+            h4.service-centers-list__title
+              a(href="#" data-lat="55.694943" data-lng="37.901558") г. Москва (Шоу-рум) 4
             p.service-centers-list__contact Адрес: <b>г. Москва, ул. Дорожная, дом 60, этаж 5, офис 1</b>
             p.service-centers-list__contact Телефон: <b>+7(499)490-72-88</b>
             p.service-centers-list__contact E-mail: <b>sale@kamin-v-dome.ru</b>
@@ -42,19 +46,36 @@ section.service-centers
   script.
     ymaps.ready(init);
 
-    var myMap, myPlacemark;
+    var myMap;
 
     function init() {
       myMap = new ymaps.Map('sc-map', {
-        center: [55.76499601, 37.36425042],
-        zoom: 17
+        center: [55.755814, 37.617635],
+        zoom: 6
       });
 
-      myPlacemark = new ymaps.Placemark([55.76499601, 37.36425042], {}, {
-        preset: 'islands#circleDotIcon',
-        iconColor: '#fe3334'
-      });
+      var groupEls = document.querySelectorAll('.service-centers-list__title a');
 
-      myMap.geoObjects.add(myPlacemark);
+      for (var i = 0; i < groupEls.length; i++) {
+        var lat = groupEls[i].getAttribute('data-lat');
+        var lng = groupEls[i].getAttribute('data-lng');
+        var myPlacemark = new ymaps.Placemark([lat, lng], { balloonContent: groupEls[i].innerHTML }, {
+          preset: 'islands#circleDotIcon',
+          iconColor: '#fe3334'
+        });
+        myMap.geoObjects.add(myPlacemark);
+
+        groupEls[i].addEventListener('click', function (e) {
+          e.preventDefault();
+          if (!myPlacemark.balloon.isOpen()) {
+              myPlacemark.balloon.open();
+          } else {
+              myPlacemark.balloon.close();
+          }
+          return false;
+        });
+      }
+
+      //- myMap.setBounds(myMap.geoObjects.getBounds());
 
     }

@@ -4,12 +4,16 @@
     +r(1200)
       padding: 0
   &__item
+    display: flex
+    flex-direction: column
+    height: 100%
     padding: 50px
     background-color: $bg-color
     color: $title-link-color
     +r(992)
       padding: 20px
     +r(767)
+      height: calc(100% - 30px)
       margin-bottom: 30px
     p
       margin-bottom: 20px
@@ -35,6 +39,7 @@
           margin-right: 5px
     .btn-flat
       width: 100%
+      margin-top: auto
       padding:
         right: 35px
         left: 35px

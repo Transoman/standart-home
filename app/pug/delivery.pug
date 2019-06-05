@@ -3,8 +3,10 @@ extends template/main
 block variables
   - var title = 'Доставка и оплата'
   - var pageClass = ''
+  - var titleForm = 'Какой диспоузер мне подойдет?'
 
 block content
   include modules/hero/hero
   include pages/delivery/payment
   include pages/delivery/delivery
+  include modules/form/form-how

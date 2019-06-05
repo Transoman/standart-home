@@ -27,10 +27,11 @@
           font-size: 14px
   &__phone
     margin-right: 90px
+    margin-left: auto
     +r(1200)
       margin-right: 40px
     +r(992)
-      margin-left: auto
+      // margin-left: auto
       flex-direction: column
       text-align: right
       .phone
@@ -43,6 +44,8 @@
           margin-right: 0
           &:nth-child(2)
             display: none
+        &__callback
+          display: none
         &__icon
           display: none
     +r(480)
@@ -51,7 +54,7 @@
         &__tel
           font-size: 11px
   &__small-contact
-    margin-left: auto
+    // margin-left: auto
     +r(992)
       margin-right: 50px
       margin-left: 0
