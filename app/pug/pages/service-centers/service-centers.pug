@@ -17,28 +17,24 @@ section.service-centers
         .service-centers-list
           .service-centers-list__item
             h4.service-centers-list__title
-              a(href="#" data-lat="55.739096" data-lng="37.747150") г. Москва (Шоу-рум) 1
-            p.service-centers-list__contact Адрес: <b>г. Москва, ул. Дорожная, дом 60, этаж 5, офис 1</b>
-            p.service-centers-list__contact Телефон: <b><a href="tel:+74994907288">+7(499)490-72-88</a></b>
-            p.service-centers-list__contact E-mail: <b><a href="mailto:sale@kamin-v-dome.ru">sale@kamin-v-dome.ru</a></b>
+              a(href="#" data-lat="55.692389" data-lng="37.622729") г. Москва
+            p.service-centers-list__contact Адрес: <b>117105, Россия, Москва, Варшавское ш., 33</b>
+            p.service-centers-list__contact E-mail: <b><a href="mailto:servicemsk@standard-home.ru">servicemsk@standard-home.ru</a></b>
           .service-centers-list__item
             h4.service-centers-list__title
-              a(href="#" data-lat="55.770899" data-lng="37.403070") г. Москва (Шоу-рум) 2
-            p.service-centers-list__contact Адрес: <b>г. Москва, ул. Дорожная, дом 60, этаж 5, офис 1</b>
-            p.service-centers-list__contact Телефон: <b>+7(499)490-72-88</b>
-            p.service-centers-list__contact E-mail: <b>sale@kamin-v-dome.ru</b>
+              a(href="#" data-lat="59.862506" data-lng="30.211035") г. Санкт-Петербург
+            p.service-centers-list__contact Адрес: <b>198096, ул. Маршала Казакова, 35, пав. 444/1</b>
+            p.service-centers-list__contact E-mail: <b><a href="mailto:servicespb@standard-home.ru">servicespb@standard-home.ru</a></b>
           .service-centers-list__item
             h4.service-centers-list__title
-              a(href="#" data-lat="55.897581" data-lng="37.399027") г. Москва (Шоу-рум) 3
-            p.service-centers-list__contact Адрес: <b>г. Москва, ул. Дорожная, дом 60, этаж 5, офис 1</b>
-            p.service-centers-list__contact Телефон: <b>+7(499)490-72-88</b>
-            p.service-centers-list__contact E-mail: <b>sale@kamin-v-dome.ru</b>
+              a(href="#" data-lat="43.424660" data-lng="39.925461") г. Сочи
+            p.service-centers-list__contact Адрес: <b>354349, Демократическая улица, 38, 2 этаж</b>
+            p.service-centers-list__contact E-mail: <b><a href="mailto:servicespb@standard-home.ru">servicespb@standard-home.ru</a></b>
           .service-centers-list__item
             h4.service-centers-list__title
-              a(href="#" data-lat="55.694943" data-lng="37.901558") г. Москва (Шоу-рум) 4
-            p.service-centers-list__contact Адрес: <b>г. Москва, ул. Дорожная, дом 60, этаж 5, офис 1</b>
-            p.service-centers-list__contact Телефон: <b>+7(499)490-72-88</b>
-            p.service-centers-list__contact E-mail: <b>sale@kamin-v-dome.ru</b>
+              a(href="#" data-lat="55.791435" data-lng="49.149919") г. Казань
+            p.service-centers-list__contact Адрес: <b>420099, ул. Чехова, 3, оф. 104</b>
+            p.service-centers-list__contact E-mail: <b><a href="mailto:servicekaz@standard-home.ru">servicekaz@standard-home.ru</a></b>
       .col-lg-6
         #sc-map.service-centers__map
 
@@ -67,15 +63,15 @@ section.service-centers
 
         groupEls[i].addEventListener('click', function (e) {
           e.preventDefault();
-          if (!myPlacemark.balloon.isOpen()) {
-              myPlacemark.balloon.open();
-          } else {
-              myPlacemark.balloon.close();
-          }
-          return false;
+          //- if (!myPlacemark.balloon.isOpen()) {
+          //-     myPlacemark.balloon.open();
+          //- } else {
+          //-     myPlacemark.balloon.close();
+          //- }
+          //- return false;
         });
       }
 
-      //- myMap.setBounds(myMap.geoObjects.getBounds());
+      myMap.setBounds(myMap.geoObjects.getBounds());
 
     }

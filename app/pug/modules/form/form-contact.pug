@@ -2,7 +2,7 @@ section.form-contact
   .container
     .form-contact__wrap
       .row
-        .col-md-6.col-lg-7.col-xl-5.offset-xl-1
+        .col-md-6.col-lg-7.col-xl-6.offset-xl-1
           if !formContactTitle
             h3 Свяжитесь с нами
           else
@@ -12,10 +12,10 @@ section.form-contact
               p.form-contact__contact-label Для абонентов Москвы и МО
               a(href="tel:+74957274365") +7 (495) 727-43-65
             .form-contact__contact-item
-              p.form-contact__contact-label Для других регионов РФ
-              a(href="tel:88002003589") 8 (800) 200-35-89
+              p.form-contact__contact-label E-mail
+              a(href="mailto:info@standard-home.ru") info@standard-home.ru
 
-        .col-md-6.col-lg-4.offset-lg-1.col-xl-3.offset-xl-2
+        .col-md-6.col-lg-4.offset-lg-1.col-xl-3
           form.ajax-form.form-contact__form
             input(type="hidden", name="subject", value="Заявка на консультацию")
             .form-group

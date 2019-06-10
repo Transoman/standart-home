@@ -63,7 +63,11 @@
   &__package
     margin-right: 15px
     font-size: 12px
+    max-width: 250px
+    +r(1200)
+      max-width: 215px
     +r(992)
+      max-width: none
       margin-right: 0
       margin-bottom: 20px
     p
@@ -93,7 +97,10 @@
     margin-left: auto
     text-align: center
     font-size: 12px
+    &-descr
+      margin-bottom: 0
     .btn
+      margin-top: 15px
       padding-top: 10px
       padding-bottom: 10px
       max-width: 200px

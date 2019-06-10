@@ -3,10 +3,12 @@
   &__wrap
     @extend .warranty__wrap
   &__item
+    position: relative
     @extend .warranty__item
     display: flex
     flex-direction: column
     height: 100%
+    overflow: hidden
     +r(767)
       height: auto
     &--green
@@ -22,3 +24,21 @@
     height: 360px
     +r(767)
       margin-top: 50px
+  &__content
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: calc(100% - 20px)
+    transform: translateY(150%)
+    padding: 20px
+    background-color: inherit
+    +trans
+    &.is-active
+      transform: translateY(0)
+    &-close
+      position: absolute
+      top: 10px
+      right: 10px
+      &::before, &::after
+        background-color: $main-color

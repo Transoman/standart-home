@@ -359,6 +359,20 @@ jQuery(document).ready(function($) {
     });
   }
 
+  let openVacancy = function() {
+    $('.vacancy__item .btn-flat').click(function(e) {
+      e.preventDefault();
+
+      $(this).parent().find('.vacancy__content').addClass('is-active');
+    });
+
+    $('.vacancy__content .btn-close').click(function(e) {
+      e.preventDefault();
+
+      $(this).parents('.vacancy__content').removeClass('is-active');
+    });
+  };
+
   // SVG
   svg4everybody({});
 
@@ -370,6 +384,7 @@ jQuery(document).ready(function($) {
   disableHover();
   toggleAdvantages();
   accordion();
+  openVacancy();
 
   $(window).resize(function() {
     masonryResize();

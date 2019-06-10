@@ -1,7 +1,7 @@
 section.s-order
   .container
     .s-order__wrap
-      h2.section-title Оффер заказ
+      h2.section-title Закажите консультацию <br>нашего специалиста
 
       form.ajax-form.s-order__form
         input(type="hidden", name="subject", value="Заявка с сайта")
@@ -16,16 +16,4 @@ section.s-order
             .form-group
               input(type="submit", value="Отправить").btn
 
-      .s-order-advantages
-        .s-order-advantages__item
-          h3.s-order-advantages__title Выездной сервис <br>24 часа
-          p Мы производим доставку на собственном современном транспорте
-        .s-order-advantages__item
-          h3.s-order-advantages__title Установим <br>за 30 минут
-          p Мы производим доставку на собственном современном транспорте
-        .s-order-advantages__item
-          h3.s-order-advantages__title Гарантийное обслуживание
-          p Мы производим доставку на собственном современном транспорте
-        .s-order-advantages__item
-          h3.s-order-advantages__title Доставим <br>в течении часа
-          p Мы производим доставку на собственном современном транспорте
+      include ../../modules/order-advantages/order-advantages
