@@ -1,12 +1,12 @@
 extends template/main
 
 block variables
-  - var title = 'Standard home model m/xl'
+  - var title = 'Rokker R100/R200'
   - var pageClass = ''
   - var titleForm = 'Какой диспоузер мне подойдет?'
 
 block content
-  include pages/product/product
-  include pages/product/gallery
-  include pages/product/docs
+  include pages/product-rokker/product
+  //- include pages/product/gallery
+  include pages/product-rokker/docs
   include modules/form/form-how
