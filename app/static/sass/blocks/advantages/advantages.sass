@@ -7,16 +7,18 @@
     padding-bottom: 50px
   &__btn
     display: block
-    width: 16px
     margin: 0 auto
     padding: 0
     border: 0
     background: none
+    color: $accent
     &:focus
       outline: none
     &-arrow
       width: 16px
       height: 55px
+      margin-top: 10px
       fill: $accent
+      animation: UpDown 1.5s ease-in-out infinite
   &--bg
     background-color: $bg-color

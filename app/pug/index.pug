@@ -1,15 +1,15 @@
 extends template/main
 
 block variables
-  - var title = 'Главная'
+  - var title = 'Магазин кухонных измельчителей Standard Home'
   - var pageClass = ''
 
 block content
   include pages/index/hero
-  include pages/index/how-work
-  include pages/index/characteristic
+  include pages/index/product-for
   include pages/index/advantages
-  include pages/index/speed
-  include pages/index/problem
+  include pages/index/info-card
+  //- include pages/index/services-card
   include pages/index/order
-  //- include pages/index/box-card
+  include pages/index/numbers
+  include pages/index/blog

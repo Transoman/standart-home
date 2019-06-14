@@ -12,8 +12,11 @@
     +r(767)
       width: 100%
     &:hover
-      img
-        transform: translate(-50%, -50%) scale(1.1)
+      //img
+      //  transform: translate(-50%, -50%) scale(1.1)
+      .problem-list
+        &__content
+          transform: translateY(0)
     img
       position: absolute
       top: 50%
@@ -33,19 +36,48 @@
         left: 0
         z-index: 1
         background-color: rgba(#000,0.5)
-      .problem-list
-        &__content, &__title
-          color: #fff
+        pointer-events: none
+      //.problem-list
+      //  &__content, &__title
+      //    color: #fff
   &__content
-    position: relative
+    position: absolute
+    top: 0
+    left: 0
     z-index: 1
-    height: calc(100% - 5px)
+    width: 100%
+    height: 100%
+    padding: 20px
+    background-color: $light-accent-color
     color: $title-link-color
-    font-size: 12px
+    font-size: 14px
     font-weight: 500
     line-height: 1.5
+    transform: translateY(120%)
+    +trans(transform, 0.5s)
+    +r(992)
+      position: relative
+      top: auto
+      left: auto
+      transform: none
+      height: 100%
+      padding: 0
+      background: none
+      color: #fff
+    h3
+      display: none
+      font-size: 18px
+      line-height: 1.3
+      color: #fff
+      +r(992)
+        display: block
   &__title
+    position: relative
+    z-index: 1
     margin-bottom: 15px
-    font-size: 16px
+    font-size: 20px
     font-weight: 700
     line-height: 1.3
+    color: #fff
+    +r(992)
+      display: none

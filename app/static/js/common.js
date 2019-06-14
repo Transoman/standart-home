@@ -92,7 +92,7 @@ jQuery(document).ready(function($) {
     let match = url.match(regexp);
 
     return match[5];
-  }
+  };
 
   let createIframe = function(id) {
     let iframe = document.createElement('iframe');
@@ -103,13 +103,13 @@ jQuery(document).ready(function($) {
     iframe.classList.add('video__media');
 
     return iframe;
-  }
+  };
 
   let generateURL = function(id) {
     let query = '?rel=0&showinfo=0&autoplay=1';
 
     return 'https://www.youtube.com/embed/' + id + query;
-  }
+  };
 
   // Sliders
   let repeatSlider = function() {
@@ -295,6 +295,7 @@ jQuery(document).ready(function($) {
             $(el).slideDown();
           }
         });
+        $(this).fadeOut();
       });
 
     }
@@ -328,7 +329,7 @@ jQuery(document).ready(function($) {
   };
 
   // Send forms
-  var getProductName = function() {
+  var getProductNameCard = function() {
     var productName;
     $('.product-order_open').click(function() {
       productName = $(this).parents('.product-card').find('.product-card__title').text();
@@ -336,6 +337,15 @@ jQuery(document).ready(function($) {
     });
   };
 
+  var getProductName = function() {
+    var productName;
+    $('.product-order_open').click(function() {
+      productName = $(this).parent().find('.product__title').text();
+      $('#product-order input[name="product_name"]').val(productName);
+    });
+  };
+
+  getProductNameCard();
   getProductName();
 
   $('.ajax-form').submit(function(e) {

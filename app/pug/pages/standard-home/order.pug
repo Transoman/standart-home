@@ -1,0 +1,19 @@
+section.s-order
+  .container
+    .s-order__wrap
+      h2.section-title Закажите консультацию <br>нашего специалиста
+
+      form.ajax-form.s-order__form
+        input(type="hidden", name="subject", value="Заявка с сайта")
+        .row
+          .col-md-4
+            .form-group
+              input(type="text", name="name", placeholder="Ваше имя", required).form-field
+          .col-md-4
+            .form-group
+              input(type="tel", name="phone", placeholder="Ваш телефон", required).form-field
+          .col-md-4
+            .form-group
+              input(type="submit", value="Отправить").btn
+
+      include ../../modules/order-advantages/order-advantages

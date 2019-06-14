@@ -28,15 +28,25 @@ header.header
       nav.nav.header__nav
         button(type="button").btn-close
         ul.nav-list
-          li.has-submenu
-            a(href="./") Главная
-            ul.sub-menu
-              li
-                a(href="lp-2.html") LP2
-              li
-                a(href="main.html") Главная 2
           li
-            a(href="products.html") Товары
+            a(href="./") Главная
+          li.has-submenu
+            a(href="products.html") Продукция
+            ul.sub-menu
+              li.has-submenu
+                a(href="rokker.html") Диспоузеры Rokker
+                ul.sub-menu
+                  li
+                    a(href="product-rokker.html") Rokker R100
+                  li
+                    a(href="product-rokker.html") Rokker R200
+              li.has-submenu
+                a(href="standard-home.html") Диспоузеры Standard Home
+                ul.sub-menu
+                  li
+                    a(href="product.html") Standard Home Model M
+                  li
+                    a(href="product.html") Standard Home Model XL
           li.has-submenu
             a(href="services.html") Сервис и Услуги
             ul.sub-menu
@@ -49,8 +59,10 @@ header.header
               li
                 a(href="service-centers.html") Сервисные центры
           li.has-submenu
-            a(href="about.html") О нас
+            a(href="about.html") О компании
             ul.sub-menu
+              li
+                a(href="contact.html") Контакты
               li
                 a(href="blog.html") Блог
               li
