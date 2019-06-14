@@ -8,20 +8,24 @@
       display: flex
       align-items: center
   &__logo
-    margin-right: 215px
+    margin-right: 195px
     +r(1200)
       margin-right: 70px
+    +r(992)
+      margin-left: 50px
     +r(767)
       margin-right: 30px
       .logo
         &__head
-          letter-spacing: -2px
-          span
-            display: none
+          font-size: 14px
+        //  //letter-spacing: -2px
+        //  span
+        //    display: none
         &__descr
           display: none
     +r(480)
       margin-right: 10px
+      margin-left: 30px
       .logo
         &__head
           font-size: 14px
@@ -48,24 +52,27 @@
           display: none
         &__icon
           display: none
+    +r(576)
+      margin-right: 15px
     +r(480)
-      margin-right: 10px
+      margin-right: 0
       .phone
         &__tel
-          font-size: 11px
+          font-size: 14px
   &__small-contact
-    // margin-left: auto
+    margin-right: 30px
     +r(992)
-      margin-right: 50px
-      margin-left: 0
-      .small-contact
-        &__item
-          padding: 0
-          margin: 0
-          &:nth-child(1)
-            display: none
-        &__icon
-          display: none
+      display: none
+      //margin-right: 50px
+      //margin-left: 0
+      //.small-contact
+      //  &__item
+      //    padding: 0
+      //    margin: 0
+      //    &:nth-child(1)
+      //      display: none
+      //  &__icon
+      //    display: none
     +r(480)
       margin-right: 30px
       .small-contact
@@ -73,3 +80,18 @@
           font-size: 10px
   &__bottom
     +bgl
+  &__social
+    justify-content: flex-end
+    +r(576)
+      display: none
+
+.header-callback
+  +r(480)
+    display: none
+  .btn
+    padding: 5px 10px
+    font-size: 12px
+    margin-bottom: 10px
+    box-shadow: 5px 5px 15px rgba(182, 240, 62, 0.25)
+    +r(576)
+      margin-bottom: 0

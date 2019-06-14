@@ -2,7 +2,7 @@ header.header
   .header__top
     .container
       a(href="./").logo.header__logo
-        span.logo__head S<span>tandard</span> H<span>ome</span>
+        span.logo__head Standard Home
         p.logo__descr Кухонные измельчители
 
       .phone.header__phone
@@ -10,7 +10,7 @@ header.header
           a(href="tel:+74951084961").phone__tel
             +icon('phone', 'phone__icon')
             | +7 495 108 49 61<br>
-          a(href="#").phone__callback.callback_open Обратный звонок
+          //a(href="#").phone__callback.callback_open Обратный звонок
 
       .small-contact.header__small-contact
         .small-contact__item
@@ -19,6 +19,16 @@ header.header
         .small-contact__item
           +icon('location', 'small-contact__icon small-contact__icon--location')
           p 115035,Россия, Москва, <br>Раушская наб., 4/5, блок 3-15
+
+      .header-callback
+        a(href="#").btn.callback_open Обратный звонок
+        ul.social.header__social
+          li
+            a(href="https://www.facebook.com/kitchencrusher/", target="_blank")
+              +icon('fb', 'social__icon')
+          li
+            a(href="https://www.instagram.com/standard_home.ru/", target="_blank")
+              +icon('insta', 'social__icon')
 
       button(type="button").nav-toggle
         span.nav-toggle__line
@@ -97,3 +107,11 @@ header.header
           .small-contact__item
             +icon('location', 'small-contact__icon small-contact__icon--location')
             p 115035,Россия, Москва, <br>Раушская наб., 4/5, блок 3-15
+
+        ul.social.nav__social
+          li
+            a(href="https://www.facebook.com/kitchencrusher/", target="_blank")
+              +icon('fb', 'social__icon')
+          li
+            a(href="https://www.instagram.com/standard_home.ru/", target="_blank")
+              +icon('insta', 'social__icon')

@@ -5,7 +5,7 @@
   +r(992)
     position: fixed
     top: 0
-    right: 0
+    left: 0
     z-index: 10
     display: block
     height: 100%
@@ -13,7 +13,7 @@
     padding: 60px 20px 40px
     margin: 0
     overflow-y: auto
-    transform: translateX(100%)
+    transform: translateX(-100%)
     +bgl
     +smooth-scroll
     +trans
@@ -40,6 +40,13 @@
             margin-bottom: 0
         &__callback
           color: #fff
+  &__social
+    display: none
+    .social
+      &__icon
+        fill: #fff
+    +r(992)
+      display: flex
   .btn-close
     display: none
     +r(992)
@@ -126,6 +133,21 @@
         > .sub-menu
           opacity: 1
           visibility: visible
+      > a
+        position: relative
+        &::after
+          content: ''
+          display: inline-block
+          vertical-align: middle
+          margin-left: 10px
+          margin-top: -2px
+          width: 0
+          height: 0
+          border-style: solid
+          border-width: 5px 4px 0 4px
+          border-color: #fff transparent transparent transparent
+          +r(1200)
+            margin-left: 5px
   a
     display: block
     padding: 6px 18px
@@ -147,11 +169,17 @@
     position: absolute
     top: 0
     left: 100%
+    +r(992)
+      position: static
+      top: auto
+      left: auto
+      a
+        padding-left: 40px
 
 .nav-toggle
   display: none
   position: absolute
-  right: 15px
+  left: 15px
   top: 50%
   width: 28px
   height: 15px
