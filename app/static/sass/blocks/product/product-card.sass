@@ -5,8 +5,10 @@
   box-shadow: 5px 5px 15px rgba(#000, 0.05)
   +r(1200)
     padding: 0 30px 20px
+  +r(767)
+    padding-top: 10px
   +r(480)
-    padding: 0 20px 20px
+    padding: 10px 20px 20px
   &__gallery
     position: relative
     margin: 0 -50px
@@ -14,6 +16,13 @@
       margin: 0 -30px
     +r(480)
       margin: 0 -20px
+    .btn
+      display: none
+      max-width: 250px
+      width: 100%
+      margin: 0 auto 20px
+      +r(767)
+        display: block
   &__features
     position: absolute
     top: 50px
@@ -21,6 +30,7 @@
     z-index: 2
     text-align: center
     +r(1200)
+      top: 30px
       left: 30px
     +r(992)
       top: 20px
@@ -29,13 +39,11 @@
     &-item
       margin-bottom: 20px
       +r(992)
-        margin-bottom: 15px
-      +r(480)
         margin-bottom: 10px
       &:last-child
         margin-bottom: 0
       img
-        +r(480)
+        +r(992)
           width: 20px
     &-title
       margin: 5px 0 0
@@ -45,16 +53,31 @@
   &__body
     padding-top: 20px
     border-top: 1px solid $bd-color
+    .product-card
+      &__title
+        display: block
+        +r(767)
+          display: none
   &__title
+    display: none
     font-size: 30px
     font-weight: 300
     text-transform: uppercase
+    +r(767)
+      display: block
+      margin-bottom: 0
     +r(480)
       font-size: 24px
+    a
+      color: inherit
+      &:hover, &:focus
+        color: lighten($link-color, 5%)
     span
       display: block
       font-size: 18px
       font-weight: 900
+      +r(767)
+        display: inline
   &__content
     display: flex
     align-items: center
@@ -105,3 +128,5 @@
       padding-bottom: 10px
       max-width: 200px
       width: 100%
+      +r(767)
+        display: none

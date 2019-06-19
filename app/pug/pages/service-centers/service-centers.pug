@@ -13,29 +13,33 @@ section.service-centers
             input(type="text", name="service_center_name", id="sc", placeholder="Например: г. Москва").form-field
 
     .row
-      .col-lg-6
+      .col-lg-6.order-2.order-lg-1
         .service-centers-list
           .service-centers-list__item
             h4.service-centers-list__title
               a(href="#" data-lat="55.692389" data-lng="37.622729") г. Москва
-            p.service-centers-list__contact Адрес: <b>117105, Россия, Москва, Варшавское ш., 33</b>
-            p.service-centers-list__contact E-mail: <b><a href="mailto:servicemsk@standard-home.ru">servicemsk@standard-home.ru</a></b>
+            .service-centers-list__content
+              p.service-centers-list__contact Адрес: <b>117105, Россия, Москва, Варшавское ш., 33</b>
+              p.service-centers-list__contact E-mail: <b><a href="mailto:servicemsk@standard-home.ru">servicemsk@standard-home.ru</a></b>
           .service-centers-list__item
             h4.service-centers-list__title
               a(href="#" data-lat="59.862506" data-lng="30.211035") г. Санкт-Петербург
-            p.service-centers-list__contact Адрес: <b>198096, ул. Маршала Казакова, 35, пав. 444/1</b>
-            p.service-centers-list__contact E-mail: <b><a href="mailto:servicespb@standard-home.ru">servicespb@standard-home.ru</a></b>
+            .service-centers-list__content
+              p.service-centers-list__contact Адрес: <b>198096, ул. Маршала Казакова, 35, пав. 444/1</b>
+              p.service-centers-list__contact E-mail: <b><a href="mailto:servicespb@standard-home.ru">servicespb@standard-home.ru</a></b>
           .service-centers-list__item
             h4.service-centers-list__title
               a(href="#" data-lat="43.424660" data-lng="39.925461") г. Сочи
-            p.service-centers-list__contact Адрес: <b>354349, Демократическая улица, 38, 2 этаж</b>
-            p.service-centers-list__contact E-mail: <b><a href="mailto:servicespb@standard-home.ru">servicespb@standard-home.ru</a></b>
+            .service-centers-list__content
+              p.service-centers-list__contact Адрес: <b>354349, Демократическая улица, 38, 2 этаж</b>
+              p.service-centers-list__contact E-mail: <b><a href="mailto:servicespb@standard-home.ru">servicespb@standard-home.ru</a></b>
           .service-centers-list__item
             h4.service-centers-list__title
               a(href="#" data-lat="55.791435" data-lng="49.149919") г. Казань
-            p.service-centers-list__contact Адрес: <b>420099, ул. Чехова, 3, оф. 104</b>
-            p.service-centers-list__contact E-mail: <b><a href="mailto:servicekaz@standard-home.ru">servicekaz@standard-home.ru</a></b>
-      .col-lg-6
+            .service-centers-list__content
+              p.service-centers-list__contact Адрес: <b>420099, ул. Чехова, 3, оф. 104</b>
+              p.service-centers-list__contact E-mail: <b><a href="mailto:servicekaz@standard-home.ru">servicekaz@standard-home.ru</a></b>
+      .col-lg-6.order-1.order-lg-2
         #sc-map.service-centers__map
 
   script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")

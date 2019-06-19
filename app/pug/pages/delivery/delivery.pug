@@ -19,34 +19,18 @@ section.delivery
               span Доставка по России и СНГ
         .col-lg-6
           .delivery__content
-            ol
-              li
-                p
-                  strong Приобретенная техника InSinkErator по Москве и Московской области доставляется ежедневно.
-                p Стоимость доставки от 5000 руб.: Бесплатно по г. Москва <br>и МО в пределах 20 км.
-                p Время работы службы доставки: с 07.30 до 22 часов без выходных. 
-                p Срок доставки: 1-2 дня
-              li
-                p
-                  strong Доставка за пределы МКАД в Москву и Московскую область:
-                p - 40 руб. за 1 км. после 20 км.
-              li
-                p
-                  strong Подъем техники на этаж выполняется бесплатно независимо от наличия грузового лифта.
-              li
-                p
-                  strong Занос в квартиру и перемещение техники по квартире выполняются бесплатно.
-
-section.payment-method
-  .container
-    .row.align-items-center.justify-content-center.justify-content-lg-start
-      .col-sm-6.col-md-4.col-lg-2.offset-lg-1
-        img(src="static/images/content/visa.svg", width="150")
-      .col-sm-6.col-md-4.col-lg-2
-        img(src="static/images/content/mastercard.svg", width="80")
-      .col-sm-6.col-md-4.col-lg-2
-        img(src="static/images/content/qiwi.svg", width="150")
-      .col-sm-6.col-md-4.col-lg-2
-        img(src="static/images/content/yandex.svg", width="150")
-      .col-sm-6.col-md-4.col-lg-2
-        img(src="static/images/content/mir.svg", width="150")
+            ol.delivery__list
+              li.delivery__list-item.active
+                h4.delivery__list-title Приобретенная техника InSinkErator по Москве и Московской области доставляется ежедневно.
+                .delivery__list-content
+                  p Стоимость доставки от 5000 руб.: Бесплатно по г. Москва <br>и МО в пределах 20 км.
+                  p Время работы службы доставки: с 07.30 до 22 часов без выходных.
+                  p Срок доставки: 1-2 дня
+              li.delivery__list-item
+                h4.delivery__list-title Доставка за пределы МКАД в Москву и Московскую область:
+                .delivery__list-content
+                  p - 40 руб. за 1 км. после 20 км.
+              li.delivery__list-item
+                h4.delivery__list-title Подъем техники на этаж выполняется бесплатно независимо от наличия грузового лифта.
+              li.delivery__list-item
+                h4.delivery__list-title Занос в квартиру и перемещение техники по квартире выполняются бесплатно.

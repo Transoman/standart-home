@@ -307,12 +307,12 @@ jQuery(document).ready(function($) {
   });
 
   // Accordion
-  let accordion = function() {
-    let el = $('.faq-list__item');
-    let elTitle = $('.faq-list__title');
-    let content = $('.faq-list__content');
+  let accordion = function(item, toggle, ct) {
+    let el = $(item);
+    let elTitle = $(toggle);
+    let content = $(ct);
 
-    $('.faq-list__item.active').find(content).slideDown(500);
+    $(item + '.active').find(content).slideDown(500);
 
     elTitle.click(function() {
       if ($(this).parent().hasClass('active')) {
@@ -330,16 +330,18 @@ jQuery(document).ready(function($) {
 
   // Send forms
   var getProductNameCard = function() {
-    var productName;
-    $('.product-order_open').click(function() {
-      productName = $(this).parents('.product-card').find('.product-card__title').text();
+    var productName, productTitle;
+    $('.product-card .product-order_open').click(function() {
+        productTitle = $(this).parents('.product-card').find('.product-card__title a')[0];
+        productName = $(productTitle).text();
+        console.log(productName);
       $('#product-order input[name="product_name"]').val(productName);
     });
   };
 
   var getProductName = function() {
     var productName;
-    $('.product-order_open').click(function() {
+    $('.product .product-order_open').click(function() {
       productName = $(this).parent().find('.product__title').text();
       $('#product-order input[name="product_name"]').val(productName);
     });
@@ -391,9 +393,11 @@ jQuery(document).ready(function($) {
   findVideos();
   repeatSlider();
   masonryResize();
-  disableHover();
+  // disableHover();
   toggleAdvantages();
-  accordion();
+  accordion('.faq-list__item', '.faq-list__title', '.faq-list__content');
+  accordion('.service-centers-list__item', '.service-centers-list__title', '.service-centers-list__content');
+  accordion('.delivery__list-item', '.delivery__list-title', '.delivery__list-content');
   openVacancy();
 
   $(window).resize(function() {

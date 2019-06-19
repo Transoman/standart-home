@@ -41,33 +41,56 @@
       fill: $link-color
       width: 15px
       height: 12px
-  &__content
-    ol
-      margin: 0
-      padding: 0
-      list-style: none
-      counter-reset: count
-      li
-        position: relative
-        padding-left: 15px
-        margin-bottom: 45px
-        +r(576)
-          margin-bottom: 30px
-        &:last-child
-          margin-bottom: 0
-        &::before
-          position: absolute
-          left: 0
-          counter-increment: count
-          content: counter(count) '.'
-          display: inline-block
-          vertical-align: top
-          color: $link-color
-          font-weight: 500
-        p
-          &:first-child
-            display: inline-block
-            vertical-align: top
-          strong
-            font-weight: 500
-            color: $title-link-color
+  &__list
+    margin: 0
+    padding: 0
+    list-style: none
+    counter-reset: count
+    &-item
+      position: relative
+      padding-left: 15px
+      margin-bottom: 45px
+      +r(576)
+        margin-bottom: 30px
+      &:last-child
+        margin-bottom: 0
+      &::before
+        position: absolute
+        left: 0
+        counter-increment: count
+        content: counter(count) '.'
+        display: inline-block
+        vertical-align: top
+        color: $link-color
+        font-weight: 500
+      &.active
+        .delivery__list
+          &-title
+            &::before
+              transform: rotate(90deg)
+    &-title
+      position: relative
+      margin-bottom: 0
+      padding-right: 30px
+      font-size: 14px
+      font-weight: 500
+      cursor: pointer
+      &::before, &::after
+        content: ''
+        position: absolute
+        background-color: $link-color
+        +trans
+      &::before
+        right: 7px
+        top: 5px
+        width: 2px
+        height: 16px
+        border-radius: 2px
+      &::after
+        height: 2px
+        width: 16px
+        right: 0
+        top: 12px
+    &-content
+      display: none
+      margin-top: 10px
