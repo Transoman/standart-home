@@ -1,0 +1,80 @@
+header.header
+  .header__top
+    .container
+      a(href="./").logo.header__logo
+        span.logo__head Standard Home
+        p.logo__descr Кухонные измельчители
+
+      .phone.header__phone
+        .phone__item
+          a(href="tel:+74951084961").phone__tel
+            +icon('phone', 'phone__icon')
+            | +7 495 108 49 61<br>
+
+      .small-contact.header__small-contact
+        .small-contact__item
+          +icon('mail', 'small-contact__icon')
+          a(href="mailto:info@standard-home.ru") info@standard-home.ru
+        .small-contact__item
+          +icon('location', 'small-contact__icon small-contact__icon--location')
+          p 115035,Россия, Москва, <br>Раушская наб., 4/5, блок 3-15
+
+      .header-callback
+        a(href="#").btn.callback_open Обратный звонок
+        ul.social.header__social
+          li
+            a(href="https://www.facebook.com/kitchencrusher/", target="_blank")
+              +icon('fb', 'social__icon')
+          li
+            a(href="https://www.instagram.com/standard_home.ru/", target="_blank")
+              +icon('insta', 'social__icon')
+
+      button(type="button").nav-toggle
+        span.nav-toggle__line
+
+  .header__bottom
+    .container
+      nav.nav.header__nav
+        button(type="button").btn-close
+        ul.nav-list
+          li
+            a(href="#") Раздел 1
+          li
+            a(href="#") Раздел 2
+          li
+            a(href="#") Раздел 3
+          li
+            a(href="#") Раздел 4
+          li
+            a(href="#") Раздел 5
+          li
+            a(href="#") Раздел 6
+        .header-search
+          form(action="#")
+            .form-group
+              input(type="text", name="s", placeholder="Поиск", required).header-search__field
+              button(type="submit").header-search__btn
+                +icon('search', 'header-search__btn-icon')
+
+        .phone.nav__phone
+          .phone__item
+            a(href="tel:+74951084961").phone__tel
+              +icon('phone', 'phone__icon')
+              | +7 495 108 49 61<br>
+            a(href="#").phone__callback.callback_open Обратный звонок
+
+        .small-contact.nav__small-contact
+          .small-contact__item
+            +icon('mail', 'small-contact__icon')
+            a(href="mailto:info@standard-home.ru") info@standard-home.ru
+          .small-contact__item
+            +icon('location', 'small-contact__icon small-contact__icon--location')
+            p 115035,Россия, Москва, <br>Раушская наб., 4/5, блок 3-15
+
+        ul.social.nav__social
+          li
+            a(href="https://www.facebook.com/kitchencrusher/", target="_blank")
+              +icon('fb', 'social__icon')
+          li
+            a(href="https://www.instagram.com/standard_home.ru/", target="_blank")
+              +icon('insta', 'social__icon')

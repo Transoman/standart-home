@@ -7,7 +7,7 @@
     +r(1200)
       padding: 0
   &__box-list
-    max-width: 420px
+    max-width: 500px
     padding: 70px 50px 80px
     background-color: $bg-green-color
     list-style: none
@@ -48,21 +48,21 @@
     counter-reset: count
     &-item
       position: relative
-      padding-left: 15px
+      //padding-left: 15px
       margin-bottom: 45px
       +r(576)
         margin-bottom: 30px
       &:last-child
         margin-bottom: 0
-      &::before
-        position: absolute
-        left: 0
-        counter-increment: count
-        content: counter(count) '.'
-        display: inline-block
-        vertical-align: top
-        color: $link-color
-        font-weight: 500
+      //&::before
+      //  position: absolute
+      //  left: 0
+      //  counter-increment: count
+      //  content: counter(count) '.'
+      //  display: inline-block
+      //  vertical-align: top
+      //  color: $link-color
+      //  font-weight: 500
       &.active
         .delivery__list
           &-title
@@ -71,7 +71,7 @@
     &-title
       position: relative
       margin-bottom: 0
-      padding-right: 30px
+      padding-left: 30px
       font-size: 14px
       font-weight: 500
       cursor: pointer
@@ -81,7 +81,7 @@
         background-color: $link-color
         +trans
       &::before
-        right: 7px
+        left: 7px
         top: 5px
         width: 2px
         height: 16px
@@ -89,8 +89,9 @@
       &::after
         height: 2px
         width: 16px
-        right: 0
+        left: 0
         top: 12px
     &-content
       display: none
       margin-top: 10px
+      padding-left: 30px

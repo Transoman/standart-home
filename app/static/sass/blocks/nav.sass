@@ -81,6 +81,8 @@
           border-color: #fff transparent transparent transparent
           +r(1200)
             margin-left: 5px
+          +r(992)
+            display: none
       &:hover
         > .sub-menu
           opacity: 1
@@ -126,6 +128,7 @@
     width: auto
     box-shadow: none
     padding: 0
+    display: none
   li
     &.has-submenu
       position: relative
@@ -137,6 +140,10 @@
         position: relative
         &::after
           content: ''
+          position: absolute
+          right: 15px
+          top: 50%
+          transform: translateY(-50%)
           display: inline-block
           vertical-align: middle
           margin-left: 10px
@@ -145,7 +152,7 @@
           height: 0
           border-style: solid
           border-width: 5px 4px 0 4px
-          border-color: #fff transparent transparent transparent
+          border-color: $title-link-color transparent transparent transparent
           +r(1200)
             margin-left: 5px
   a

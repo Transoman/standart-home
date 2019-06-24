@@ -371,19 +371,19 @@ jQuery(document).ready(function($) {
     });
   }
 
-  let openVacancy = function() {
-    $('.vacancy__item .btn-flat').click(function(e) {
-      e.preventDefault();
-
-      $(this).parent().find('.vacancy__content').addClass('is-active');
-    });
-
-    $('.vacancy__content .btn-close').click(function(e) {
-      e.preventDefault();
-
-      $(this).parents('.vacancy__content').removeClass('is-active');
-    });
-  };
+  // let openVacancy = function() {
+  //   $('.vacancy__item .btn-flat').click(function(e) {
+  //     e.preventDefault();
+  //
+  //     $(this).parent().find('.vacancy__content').addClass('is-active');
+  //   });
+  //
+  //   $('.vacancy__content .btn-close').click(function(e) {
+  //     e.preventDefault();
+  //
+  //     $(this).parents('.vacancy__content').removeClass('is-active');
+  //   });
+  // };
 
   // SVG
   svg4everybody({});
@@ -398,7 +398,7 @@ jQuery(document).ready(function($) {
   accordion('.faq-list__item', '.faq-list__title', '.faq-list__content');
   accordion('.service-centers-list__item', '.service-centers-list__title', '.service-centers-list__content');
   accordion('.delivery__list-item', '.delivery__list-title', '.delivery__list-content');
-  openVacancy();
+  // openVacancy();
 
   $(window).resize(function() {
     masonryResize();
