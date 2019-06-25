@@ -29,6 +29,21 @@
     .form-group
       input(type="submit", value="Отправить").btn
 
+#vacancy.modal
+  button(type="button").vacancy_close.modal__close Close
+    span.modal__close-line
+
+  h3.modal__title Запись на собеседование
+
+  form.ajax-form.modal__form
+    input(type="hidden", name="subject", value="Запись на собеседование")
+    .form-group
+      input(type="text", name="name", placeholder="Ваше имя", required).form-field
+    .form-group
+      input(type="tel", name="phone", placeholder="Ваш телефон", required).form-field
+    .form-group
+      input(type="submit", value="Записаться").btn
+
 #thanks.modal
   button(type="button").thanks_close.modal__close Close
     span.modal__close-line
