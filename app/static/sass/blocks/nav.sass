@@ -68,21 +68,21 @@
     &.has-submenu
       > a
         position: relative
-        &::after
-          content: ''
-          display: inline-block
-          vertical-align: middle
-          margin-left: 10px
-          margin-top: -2px
-          width: 0
-          height: 0
-          border-style: solid
-          border-width: 5px 4px 0 4px
-          border-color: #fff transparent transparent transparent
-          +r(1200)
-            margin-left: 5px
-          +r(992)
-            display: none
+        //&::after
+        //  content: ''
+        //  display: inline-block
+        //  vertical-align: middle
+        //  margin-left: 10px
+        //  margin-top: -2px
+        //  width: 0
+        //  height: 0
+        //  border-style: solid
+        //  border-width: 5px 4px 0 4px
+        //  border-color: #fff transparent transparent transparent
+        //  +r(1200)
+        //    margin-left: 5px
+        //  +r(992)
+        //    display: none
       &:hover
         > .sub-menu
           opacity: 1
@@ -105,6 +105,25 @@
       &:hover, &:focus
         background-color: $link-color
         box-shadow: inset 0px 0px 5px rgba(#000, 0.05)
+  &__carret
+    display: inline-block
+    vertical-align: middle
+    margin-left: 10px
+    margin-top: -2px
+    width: 0
+    height: 0
+    border-style: solid
+    border-width: 5px 4px 0 4px
+    border-color: #fff transparent transparent transparent
+    +trans
+    +r(1200)
+      margin-left: 5px
+    +r(992)
+      float: right
+      margin-top: 5px
+    //  display: none
+    &.is-active
+      transform: rotate(180deg)
 
 .sub-menu
   position: absolute
@@ -129,6 +148,7 @@
     box-shadow: none
     padding: 0
     display: none
+    transition: none
   li
     &.has-submenu
       position: relative
@@ -138,23 +158,23 @@
           visibility: visible
       > a
         position: relative
-        &::after
-          content: ''
-          position: absolute
-          right: 15px
-          top: 50%
-          transform: translateY(-50%)
-          display: inline-block
-          vertical-align: middle
-          margin-left: 10px
-          margin-top: -2px
-          width: 0
-          height: 0
-          border-style: solid
-          border-width: 5px 4px 0 4px
-          border-color: $title-link-color transparent transparent transparent
-          +r(1200)
-            margin-left: 5px
+        //&::after
+        //  content: ''
+        //  position: absolute
+        //  right: 15px
+        //  top: 50%
+        //  transform: translateY(-50%)
+        //  display: inline-block
+        //  vertical-align: middle
+        //  margin-left: 10px
+        //  margin-top: -2px
+        //  width: 0
+        //  height: 0
+        //  border-style: solid
+        //  border-width: 5px 4px 0 4px
+        //  border-color: $title-link-color transparent transparent transparent
+        //  +r(1200)
+        //    margin-left: 5px
   a
     display: block
     padding: 6px 18px
@@ -182,6 +202,21 @@
       left: auto
       a
         padding-left: 40px
+  .nav-list__carret
+    +rmin(992)
+      position: absolute
+      right: 15px
+      top: 50%
+      transform: translateY(-50%)
+      display: inline-block
+      vertical-align: middle
+      margin-left: 10px
+      margin-top: -2px
+      width: 0
+      height: 0
+      border-style: solid
+      border-width: 5px 4px 0 4px
+      border-color: $title-link-color transparent transparent transparent
 
 .nav-toggle
   display: none

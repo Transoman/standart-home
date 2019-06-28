@@ -1,0 +1,23 @@
+section.product-gallery
+  .container
+    h2.section-title Фотогалерея
+
+    .product-gallery-slider.swiper-container
+      .swiper-wrapper
+        .product-gallery-slider__item.swiper-slide
+          a(href="static/images/content/gallery/product-rokker-full-7.jpg", data-fancybox="group")
+            img(src="static/images/content/gallery/product-rokker-7.jpg", alt="")
+        .product-gallery-slider__item.swiper-slide
+          a(href="static/images/content/gallery/product-rokker-full-8.jpg", data-fancybox="group")
+            img(src="static/images/content/gallery/product-rokker-8.jpg", alt="")
+        .product-gallery-slider__item.swiper-slide
+          a(href="static/images/content/gallery/product-rokker-full-9.jpg", data-fancybox="group")
+            img(src="static/images/content/gallery/product-rokker-9.jpg", alt="")
+        .product-gallery-slider__item.swiper-slide
+          a(href="static/images/content/gallery/product-rokker-full-10.jpg", data-fancybox="group")
+            img(src="static/images/content/gallery/product-rokker-10.jpg", alt="")
+    .swiper-btns
+      .swiper-button-prev
+        +icon('arrow-right-2')
+      .swiper-button-next
+        +icon('arrow-right-2')

@@ -1,0 +1,101 @@
+.bundle
+  display: flex
+  justify-content: space-between
+  //padding-left: 100px
+  //padding-right: 70px
+  +r(767)
+    flex-wrap: wrap
+    align-items: center
+    justify-content: center
+  &__img-wrap
+    position: relative
+    width: 325px
+    text-align: center
+    flex-shrink: 0
+    margin-right: 25px
+    +r(992)
+      width: 245px
+      margin-right: 0
+    img
+      position: relative
+      top: 6%
+      left: 12%
+      z-index: 1
+      +r(992)
+        width: 150px
+        top: 11%
+        left: 15%
+      +r(767)
+        width: 180px
+  &__circle
+    position: absolute
+    top: 70px
+    left: 50px
+    width: 230px
+    height: 230px
+    background: $accent
+    border-radius: 50%
+    +r(992)
+      width: 150px
+      height: 150px
+    &::before
+      content: ''
+      position: absolute
+      top: -45px
+      right: -45px
+      bottom: -45px
+      left: -45px
+      border-radius: 50%
+      border: 1px solid rgba(#73767a, 0.2)
+      +r(992)
+        top: -15px
+        bottom: -15px
+        right: -15px
+        left: -15px
+  &__bundle
+    max-width: 650px
+    padding-top: 25px
+    &-top
+      position: relative
+      text-align: center
+      margin-bottom: 20px
+      padding-bottom: 20px
+      border-bottom: 1px solid rgba(#73767a, 0.2)
+      &::before
+        content: ''
+        position: absolute
+        left: 0
+        bottom: 0
+        height: 1px
+        width: 50px
+        background: rgba(#73767a, 0.2)
+        transform: rotateZ(-125deg)
+        transform-origin: 0
+        +r(1200)
+          width: 43px
+        +r(992)
+          width: 53px
+        +r(767)
+          display: none
+
+.bundle-list
+  column-count: 2
+  column-gap: 50px
+  padding: 0
+  margin: 0
+  list-style-type: none
+  counter-reset: list 0
+  +r(992)
+    column-count: 1
+  li
+    position: relative
+    margin-bottom: 15px
+    padding-left: 20px
+    font-size: 16px
+    &::before
+      content: counter(list) ". "
+      counter-increment: list
+      position: absolute
+      left: 0
+      color: $accent
+      font-weight: 700

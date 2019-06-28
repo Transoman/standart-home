@@ -37,7 +37,7 @@ section.product
       .col-md-6.col-xl-5.offset-xl-1
         .product__summary
           h1.product__title Standard home
-            span  model m/xl
+            span  model m
           .product__short-descr
             p Собственная торговая марка магазина Standard Home. Оптимальное соотношение цены и качества, а также система шумоподавления обеспечивают любовь потребителей на всем постсоветском пространстве.
 
@@ -72,7 +72,9 @@ section.product
         li
           a(href="#functions") Функции
         li
-          a(href="#doc") Документы и чертежи
+          a(href="#equipment") Комплектация
+        li
+          a(href="#dimensions") Габариты
 
       .product-tabs__item#tech
         h4.product-tabs__title Технические характеристики M
@@ -124,56 +126,9 @@ section.product
             th Размеры в упаковке
             td 310x210x335
 
-        h4.product-tabs__title Технические характеристики XL
-        table
-          tr
-            th Мощность
-            td 1 (л/с)
-          tr
-            th Скорость вращения
-            td 3800 (об/мин)
-          tr
-            th Диаметр сливного отверстия в раковине
-            td 90 (мм)
-          tr
-            th Шум
-            td <50 (дБ)
-          tr
-            th Объем камеры
-            td 1400 (мл)
-          tr
-            th Мощность дробления
-            td 5,2 (кг/м)
-          tr
-            th Размер перемолотых частиц
-            td > 1.0 (мм)
-          tr
-            th Камера
-            td Нержавеющая сталь 08Х18Н10
-          tr
-            th Переходник от раковины
-            td Нержавеющая сталь 08Х18Н11
-          tr
-            th Лезвия
-            td Нержавеющая сталь 08Х18Н12
-          tr
-            th Дробящее кольцо
-            td Нержавеющая сталь 08Х18Н13
-          tr
-            th Материал корпуса
-            td PA6 (ударопрочная пластмасса)
-          tr
-            th Управление
-            td Пневмокнопка/ П/У
-          tr
-            th Вес (нетто)
-            td 7.5 (Кг)
-          tr
-            th Размеры в упаковке
-            td 335x255x305
 
       .product-tabs__item#functions
-        h4.product-tabs__title Функции (едины для M и для XL):
+        h4.product-tabs__title Функции
         ul
           li Технология двойного измельчения
           li Измельчение отходов до частиц диаметром 1 мм (в 5 раз меньше зерна риса) позволит забыть о услугах сантехника навсегда
@@ -182,25 +137,25 @@ section.product
           li Защита от перегрузки
           li Автоматическая система защиты от перегрузки. Диспоузер автоматически выключится если вы случайно оставите его работать или произойдет скачок напряжения в доме.
 
-      .product-tabs__item#doc
-        h4.product-tabs__title Документы и чертежи M
-        ul
-          li
-            a(href="docs/ogrn_m.pdf", target="_blank") ОГРН
-          li
-            a(href="docs/instruction_m_xl.pdf", target="_blank") Инструкция
-          li
-            a(href="warranty_m.pdf", target="_blank") Гарантия
-          li
-            a(href="static/images/content/drawing-m.jpg", data-fancybox) Чертеж
 
-        h4.product-tabs__title Документы и чертежи XL
-        ul
-          li
-            a(href="docs/ogrn_m.pdf", target="_blank") ОГРН
-          li
-            a(href="docs/instruction_m_xl.pdf", target="_blank") Инструкция
-          li
-            a(href="warranty_m.pdf", target="_blank") Гарантия
-          li
-            a(href="static/images/content/drawing-xl.jpg", data-fancybox) Чертеж
+      .product-tabs__item#equipment
+        h4.product-tabs__title Комплектация
+
+        .bundle
+          .bundle__img-wrap
+            img(src="static/images/content/crasher-bundle.png", alt="")
+            .bundle__circle
+
+          .bundle__bundle
+            .bundle__bundle-top
+              img(src="static/images/content/bundle.png", alt="")
+            .bundle__bundle-botom
+              ol.bundle-list
+                li Комплект пневмовыключателя (кнопка белая и хромированная)
+                li Фильтрующая сетка с резиновой пробкой
+                li Крепежный узел к мойке с резиновым экраном
+                li Сливная трубка с пружинным хомутом
+
+      .product-tabs__item#dimensions
+        h4.product-tabs__title Габариты M
+        img(src="static/images/content/drawing-1.jpg")

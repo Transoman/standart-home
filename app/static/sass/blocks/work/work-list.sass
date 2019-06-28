@@ -1,0 +1,69 @@
+.work-list
+  margin: 0
+  padding: 0
+  //padding: 50px 30px 35px
+  list-style: none
+  display: flex
+  justify-content: space-between
+  +r(767)
+    flex-direction: column
+    align-items: center
+  li
+    width: 290px
+    padding-right: 20px
+    +r(767)
+      position: relative
+      padding: 0
+      margin-bottom: 25px
+      text-align: center
+    img
+      margin-bottom: 10px
+      +r(767)
+        width: 170px
+        margin-bottom: 15px
+    &:last-child
+      +r(767)
+        margin-bottom: 0
+      .work-list__number::after
+        display: none
+    h3
+      margin-bottom: 15px
+      font-size: 18px
+      font-weight: 500
+      //color: #fff
+    p
+      margin-bottom: 15px
+      //color: #7d7f84
+      line-height: 1.5
+  &__number
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 36px
+    height: 36px
+    margin-bottom: 20px
+    font-size: 18px
+    font-weight: 500
+    color: #fff
+    background-color: $accent
+    border-radius: 50%
+    +r(767)
+      position: absolute
+      top: -10px
+      left: 40px
+    &::after
+      content: ''
+      position: absolute
+      left: calc(100% + 10px)
+      top: 50%
+      transform: translateY(-50%)
+      width: 340px
+      height: 1px
+      background: url("../images/general/work-dashed.png") no-repeat
+      +r(1200)
+        width: 235px
+      +r(992)
+        width: 145px
+      +r(767)
+        display: none

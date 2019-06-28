@@ -385,6 +385,16 @@ jQuery(document).ready(function($) {
   //   });
   // };
 
+  let mobileMenuToggle = function() {
+    if ($(window).width() < 993) {
+      $('.nav-list__carret').click(function(e) {
+        e.preventDefault();
+        $(this).toggleClass('is-active');
+        $(this).parent().next().slideToggle();
+      });
+    }
+  };
+
   // SVG
   svg4everybody({});
 
@@ -399,6 +409,7 @@ jQuery(document).ready(function($) {
   accordion('.service-centers-list__item', '.service-centers-list__title', '.service-centers-list__content');
   accordion('.delivery__list-item', '.delivery__list-title', '.delivery__list-content');
   // openVacancy();
+  mobileMenuToggle();
 
   $(window).resize(function() {
     masonryResize();
