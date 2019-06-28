@@ -1,0 +1,12 @@
+extends template/main
+
+block variables
+  - var title = 'Standard Home Model XL'
+  - var pageClass = ''
+  - var titleForm = 'Какой диспоузер мне подойдет?'
+
+block content
+  include pages/standard-home-xl/product
+  include pages/standard-home-xl/gallery
+  include pages/standard-home-xl/docs
+  include modules/form/form-how

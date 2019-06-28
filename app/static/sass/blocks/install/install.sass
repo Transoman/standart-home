@@ -7,9 +7,13 @@
     background-color: $bg-color
     margin-bottom: 80px
     +r(992)
-      flex-direction: column-reverse
+      flex-direction: column
+      &:nth-child(even)
+        flex-direction: column-reverse
     +r(576)
       margin-bottom: 30px
+    &:last-child
+      margin-bottom: 0
     &-2
       .bd-l
         margin-top: 25px
