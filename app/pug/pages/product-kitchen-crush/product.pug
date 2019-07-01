@@ -1,10 +1,20 @@
 section.product
   .container
+    .breadcrumb
+      a(href="./") Главная
+      a(href="products.html") Продукция
+      span Kitchen Crush
+
+    h1.product__title Kitchen Crush
+
     .row.mb50
       .col-md-6.col-xl-5
         .product__gallery
           .product-slider.swiper-container
             .swiper-wrapper
+              .product-slider__item.swiper-slide
+                a(href="static/images/content/gallery/kc/kc-0.jpg", data-fancybox="gallery").product-slider__link
+                  img(src="static/images/content/gallery/kc/kc-0.jpg", alt="")
               .product-slider__item.swiper-slide
                 a(href="static/images/content/gallery/kc/kc-full-1.jpg", data-fancybox="gallery").product-slider__link
                   img(src="static/images/content/gallery/kc/kc-1.jpg", alt="")
@@ -35,6 +45,8 @@ section.product
 
           .product-thumb-slider.swiper-container
             .swiper-wrapper
+              .product-thumb-slider__item.swiper-slide
+                img(src="static/images/content/gallery/kc/kc-sm-0.jpg", alt="")
               .product-thumb-slider__item.swiper-slide
                 img(src="static/images/content/gallery/kc/kc-sm-1.jpg", alt="")
               .product-thumb-slider__item.swiper-slide

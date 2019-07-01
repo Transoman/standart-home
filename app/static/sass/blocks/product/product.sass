@@ -6,12 +6,21 @@
 @import 'product-thumb-slider'
 
 .product
+  &__summary
+    .product
+      &__title
+        display: block
+        +r(767)
+          display: none
   &__title
+    display: none
     margin-bottom: 15px
     font-size: 36px
     font-weight: 300
     text-transform: uppercase
     color: #000
+    +r(767)
+      display: block
     +r(576)
       font-size: 26px
     span
