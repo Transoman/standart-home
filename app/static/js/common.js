@@ -8,7 +8,8 @@ Masonry = require('masonry-layout'),
 imagesLoaded = require('imagesloaded'),
 jQueryBridget = require('jquery-bridget'),
 Simplebar = require('simplebar'),
-Tabslet = require('tabslet');
+Tabslet = require('tabslet'),
+readmore = require('readmore-js');
 
 jQuery(document).ready(function($) {
 
@@ -394,6 +395,15 @@ jQuery(document).ready(function($) {
       });
     }
   };
+
+  $('.vacancy__content').readmore({
+    moreLink: '<a href="#" class="vacancy__content-more">Подробнее</a>',
+    lessLink: '<a href="#" class="vacancy__content-more">Спрятать</a>',
+    collapsedHeight: 150,
+    beforeToggle: function(trigger, element, expanded) {
+      element.toggleClass('active');
+    }
+  });
 
   // SVG
   svg4everybody({});
