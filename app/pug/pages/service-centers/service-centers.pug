@@ -56,15 +56,6 @@ section.service-centers
 
       var groupEls = document.querySelectorAll('.service-centers-list__title a');
 
-      var toggleBalloon = function(e) {
-        e.preventDefault();
-        if (!myPlacemark.balloon.isOpen()) {
-            myPlacemark.balloon.open();
-        } else {
-            myPlacemark.balloon.close();
-        }
-      };
-
       for (var i = 0; i < groupEls.length; i++) {
         var lat = groupEls[i].getAttribute('data-lat');
         var lng = groupEls[i].getAttribute('data-lng');
@@ -74,18 +65,6 @@ section.service-centers
         });
         myMap.geoObjects.add(myPlacemark);
       }
-
-      document.querySelector('.service-centers-list').addEventListener('click', function(e) {
-        e.preventDefault();
-        //- var target = e.target;
-
-        //- if (target.tagName != 'A') {
-        //-   return;
-        //- }
-
-        //- toggleBalloon(e);
-
-      });
 
       myMap.setBounds(myMap.geoObjects.getBounds());
 
