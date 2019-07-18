@@ -1,23 +1,7 @@
-global.jQuery = require('jquery');
-let svg4everybody = require('svg4everybody'),
-popup = require('jquery-popup-overlay'),
-Imask = require('imask'),
-Swiper = require('swiper'),
-fancybox = require('@fancyapps/fancybox'),
-Masonry = require('masonry-layout'),
-imagesLoaded = require('imagesloaded'),
-jQueryBridget = require('jquery-bridget'),
-Simplebar = require('simplebar'),
-Tabslet = require('tabslet'),
-readmore = require('readmore-js');
-
 jQuery(document).ready(function($) {
-
-  jQueryBridget( 'masonry', Masonry, $ );
-
   // Toggle nav menu
-  let toggleMenu = function() {
-    let nav = $('.header__nav');
+  var toggleMenu = function() {
+    var nav = $('.header__nav');
     $('.nav-toggle').on('click', function (e) {
       e.preventDefault();
       nav.toggleClass('is-active');
@@ -38,9 +22,9 @@ jQuery(document).ready(function($) {
     }
   });
 
-  let inputMask = function() {
-    let inputMask = $('input[type="tel"]');
-    let maskOptions = {
+  var inputMask = function() {
+    var inputMask = $('input[type="tel"]');
+    var maskOptions = {
       mask: '+{7} (000) 000-00-00'
     };
 
@@ -53,29 +37,29 @@ jQuery(document).ready(function($) {
   };
 
   // Youtube Video Lazy Load
-  let findVideos = function() {
-    let videos = document.querySelectorAll('.video');
+  var findVideos = function() {
+    var videos = document.querySelectorAll('.video');
 
-    for (let i = 0; i < videos.length; i++) {
+    for (var i = 0; i < videos.length; i++) {
       setupVideo(videos[i]);
     }
   };
 
-  let setupVideo = function (video) {
-    let link = video.querySelector('.video__link');
-    let button = video.querySelector('.video__button');
-    let id = parseMediaURL(link);
+  var setupVideo = function (video) {
+    var link = video.querySelector('.video__link');
+    var button = video.querySelector('.video__button');
+    var id = parseMediaURL(link);
 
     video.addEventListener('click', function() {
-      let iframe = createIframe(id);
+      var iframe = createIframe(id);
 
       link.remove();
       button.remove();
       video.appendChild(iframe);
     });
 
-    let source = "https://img.youtube.com/vi/"+ id +"/maxresdefault.jpg";
-    let image = new Image();
+    var source = "https://img.youtube.com/vi/"+ id +"/maxresdefault.jpg";
+    var image = new Image();
     image.src = source;
     image.classList.add('video__media');
 
@@ -87,16 +71,16 @@ jQuery(document).ready(function($) {
     video.classList.add('video--enabled');
   };
 
-  let parseMediaURL = function(media) {
-    let regexp = /^((?:https?:)?\/\/)?((?:www|m)\.)?((?:youtube\.com|youtu.be))(\/(?:[\w\-]+\?v=|embed\/|v\/)?)([\w\-]+)(\S+)?$/;
-    let url = media.href;
-    let match = url.match(regexp);
+  var parseMediaURL = function(media) {
+    var regexp = /^((?:https?:)?\/\/)?((?:www|m)\.)?((?:youtube\.com|youtu.be))(\/(?:[\w\-]+\?v=|embed\/|v\/)?)([\w\-]+)(\S+)?$/;
+    var url = media.href;
+    var match = url.match(regexp);
 
     return match[5];
   };
 
-  let createIframe = function(id) {
-    let iframe = document.createElement('iframe');
+  var createIframe = function(id) {
+    var iframe = document.createElement('iframe');
 
     iframe.setAttribute('allowfullscreen', '');
     iframe.setAttribute('allow', 'autoplay');
@@ -106,20 +90,20 @@ jQuery(document).ready(function($) {
     return iframe;
   };
 
-  let generateURL = function(id) {
-    let query = '?rel=0&showinfo=0&autoplay=1';
+  var generateURL = function(id) {
+    var query = '?rel=0&showinfo=0&autoplay=1';
 
     return 'https://www.youtube.com/embed/' + id + query;
   };
 
   // Sliders
-  let repeatSlider = function() {
-    let sliders = $('.product-card-slider');
+  var repeatSlider = function() {
+    var sliders = $('.product-card-slider');
 
     if (sliders.length) {
 
       sliders.each(function(i, el) {
-        let $this = $(this);
+        var $this = $(this);
         $this.addClass("product-card-slider-" + i);
         $this.find('a').addClass("product-card-slider__link-" + i);
         $this.next().addClass("product-card-thumb-slider-" + i);
@@ -172,7 +156,7 @@ jQuery(document).ready(function($) {
 
   };
 
-  let productSlider = new Swiper('.product-slider', {
+  var productSlider = new Swiper('.product-slider', {
     spaceBetween: 30,
     thumbs: {
       swiper: {
@@ -229,17 +213,17 @@ jQuery(document).ready(function($) {
   });
 
   // Masonry
-  let grid = $('.problem-list').masonry({
+  var grid = $('.problem-list').masonry({
     itemSelector: '.problem-list__item',
     columnWidth: '.problem-list__item:last-child'
   });
 
-  let masonryResize = function () {
+  var masonryResize = function () {
     if($('.problem-list').length) {
-      let defaultSize = $('.problem-list__item:last-child').outerWidth();
-      let defaultWidth = $('.problem-list__item');
-      let height50 = $('.problem-list__item--50');
-      let height100 = $('.problem-list__item--100');
+      var defaultSize = $('.problem-list__item:last-child').outerWidth();
+      var defaultWidth = $('.problem-list__item');
+      var height50 = $('.problem-list__item--50');
+      var height100 = $('.problem-list__item--100');
 
       if ($(window).width() < 768) {
         defaultWidth.css('height', defaultSize / 1.69);
@@ -254,15 +238,15 @@ jQuery(document).ready(function($) {
     }
   }
 
-  let imgLoad = new imagesLoaded($('.problem-list'));
+  var imgLoad = new imagesLoaded($('.problem-list'));
 
   imgLoad.on( 'progress', function( instance, image ) {
     grid.masonry('layout');
   });
 
   // Disable hover on scroll
-  let disableHover = function() {
-    let body = document.body,
+  var disableHover = function() {
+    var body = document.body,
     timer;
 
     window.addEventListener('scroll', function() {
@@ -277,9 +261,9 @@ jQuery(document).ready(function($) {
     }, false);
   };
 
-  let toggleAdvantages = function() {
-    let items = $('.advantages-list__item');
-    let btn = $('.s-advantages__btn');
+  var toggleAdvantages = function() {
+    var items = $('.advantages-list__item');
+    var btn = $('.s-advantages__btn');
 
     if(items.length) {
 
@@ -308,10 +292,10 @@ jQuery(document).ready(function($) {
   });
 
   // Accordion
-  let accordion = function(item, toggle, ct) {
-    let el = $(item);
-    let elTitle = $(toggle);
-    let content = $(ct);
+  var accordion = function(item, toggle, ct) {
+    var el = $(item);
+    var elTitle = $(toggle);
+    var content = $(ct);
 
     $(item + '.active').find(content).slideDown(500);
 
@@ -372,7 +356,7 @@ jQuery(document).ready(function($) {
     });
   }
 
-  // let openVacancy = function() {
+  // var openVacancy = function() {
   //   $('.vacancy__item .btn-flat').click(function(e) {
   //     e.preventDefault();
   //
@@ -386,7 +370,7 @@ jQuery(document).ready(function($) {
   //   });
   // };
 
-  let mobileMenuToggle = function() {
+  var mobileMenuToggle = function() {
     if ($(window).width() < 993) {
       $('.nav-list__carret').click(function(e) {
         e.preventDefault();

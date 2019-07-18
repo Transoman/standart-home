@@ -1,5 +1,5 @@
 let gp = require('gulp-load-plugins')(),
-    autoprefixer = require('autoprefixer')
+    autoprefixer = require('autoprefixer'),
     stylesPATH = {
         "input": "./app/static/sass/",
         "ouput": "./build/static/css/"
